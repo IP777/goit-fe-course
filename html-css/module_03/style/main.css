@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+/*Верстка через border-box*/
+html {
+ box-sizing: border-box;
+ font-family: 'Playfair Display', serif;
+ color: #626262;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+
+body {
+  margin: 0;  /*обнуляю дефолтный margin*/
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 100;
+  color: #b4ad9e;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14pt;
+  transition: color 0.3s;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  color: #03a9f4;
+}
+
+p {
+  font-size: 14px;
+}
+
+img { 
+  display: block;
+  max-width: 100%;
+  height: auto;
+ }
+
+/*Меню сайта*/
+.nav_bar {
+  padding: 78px 0px 100px 0px;
+  text-align: center;
+}
+
+.menu{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li:not(:last-child){
+  margin-right: 120px;
+}
+
+/*Карточки*/
+.card_menu {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: inline-block;
+  width: 400px;
+  margin-bottom: 130px;
+  margin-right: 96px;
+  padding: 10px;
+}
+
+.card:nth-child(2n){
+  margin-right: 0px;
+}
+
+.card:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card_img_name {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*Футтер сайта*/
+.footer{
+  margin-top: -60px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer_btn {
+  display: inline-block;
+  height: 60px;
+  width: 160px;
+  padding: 0px; /*обнуляю дефолтный паддинг*/
+  background-color: white;
+  border-width: 1px;
+  border-color: #626262;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.footer_btn:hover{
+  color: white;
+  background-color: #626262;
+}
