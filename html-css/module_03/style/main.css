@@ -93,6 +93,7 @@ img {
   margin-bottom: 130px;
   margin-right: 100px;
   padding: 10px;
+  transition: box-shadow 0.4s;
 }
 
 /*Все елементі кроме 2рых*/
@@ -101,7 +102,7 @@ img {
 }
 
 .card:hover{
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
 }
 
 .card_img_name {
