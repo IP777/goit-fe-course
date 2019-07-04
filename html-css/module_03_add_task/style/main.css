@@ -96,14 +96,14 @@ html {
 
 .selector{
     text-align: justify;
-    font-size: 18pt;
+    font-size: 14pt;
     list-style-type: none;
 }
 
 /* И тут мне стало в лом создавать обвертку для списка )) */
 .selector::before{
     content: "Приоритеты селекторов по убывающей";
-    font-size: 20pt;
+    font-size: 16pt;
     font-weight: 600;
 }
 
