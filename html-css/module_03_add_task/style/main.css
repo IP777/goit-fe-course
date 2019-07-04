@@ -99,6 +99,14 @@ html {
     font-size: 18pt;
     list-style-type: none;
 }
+
+/* И тут мне стало в лом создавать обвертку для списка )) */
+.selector::before{
+    content: "Приоритеты селекторов по убывающей";
+    font-size: 20pt;
+    font-weight: 600;
+}
+
 .num_selector{
     font-weight: 800;
 }
