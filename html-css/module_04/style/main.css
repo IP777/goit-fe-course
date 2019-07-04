@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+@import url('Roboto:300,900&display=swap&subset=cyrillic');
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/*Верстка через border-box*/
+html {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    color: #0f0101;
+   }
+   
+   *, *::before, *::after {
+     box-sizing: inherit;
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+  }
+
+/*--Меню сайта--*/
+header{
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    color: #2f2323;
+}
+
+/* Логотип */
+.logo{
+    display: inline-block;
+    font-size: 30pt;
+}
+
+.text_logo{
+    margin: 0;
+}
+
+.text_logo::before{
+    content: "M";
+    font-family: 'Roboto', sans-serif;
+    color: #1abc9c;
+    font-weight: 700;
+}
+/* Меню */
+nav{
+    display: inline-block;
+    float: right;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+}
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .section_menu{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10pt;
+    color: #0f0101;
+  }
+
+  .section_menu:hover{
+    color: #1abc9c;
+  }
