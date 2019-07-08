@@ -1,3 +1,4 @@
-# psd-makets
+$ cat .gitignore
 
-html-css/module_01-02/Maket/
+*.psd
+/Maket
