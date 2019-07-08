@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Module 1-2</title>
-	<!-- <link rel="stylesheet" href="style/main.css"> -->
+	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
 	<header>
@@ -24,47 +24,62 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<section class="card_section">
-			<!-- пример создания карточек через div -блоки -->
-			<div class="card_row">
-				<div class="card">
-					<img src="img/1.jpg" alt="1.jpg" class="card_img">
-					<h3 class="card_img_name">Lifestyle</h3>
-					<h2 class="card_name">More than fust a music festival</h2>
-					<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
-				</div>
-				<div class="card">
-					<img src="img/2.jpg" alt="2.jpg" class="card_img">
-					<h3 class="card_img_name">Lifestyle</h3>
-					<h2 class="card_name">Life tastes better with coffee</h2>
-					<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
-				</div>
-			</div>
-			<div class="card_row">
-				<div class="card">
-					<img src="img/3.jpg" alt="3.jpg" class="card_img">
-					<h3 class="card_img_name">Lifestyle</h3>
-					<h2 class="card_name">American dream</h2>
-					<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
-				</div>
-				<div class="card">
-					<img src="img/4.jpg" alt="4.jpg" class="card_img">
-					<h3 class="card_img_name">Lifestyle</h3>
-					<h2 class="card_name">A day exploring the Alps</h2>
-					<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
-				</div>
-			</div>
-			<center><button class="footer_btn">Load more</button></center>
-		</section>
-	</main>
-	<footer>
-		<center>
-			<p>В задание было сказано без СSS оформления, но про JS -нечего не было сказано))
-			Нажми на кнопку..</p>
-			<input value="Нажми на кнопку.." id="button" type="button">
-		</center>
-	</footer>
+	<main class="container">
+			<ul class="card_menu">
+				<li>
+					<article class="card">
+						<img src="img/1.jpg" alt="1.jpg" class="card_img">
+						<h3 class="card_img_name">Lifestyle</h3>
+						<h2 class="card_name">More than fust a music festival</h2>
+						<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea</p>
+					</article>
+				</li>
+				<li>
+					<article class="card">
+						<img src="img/2.jpg" alt="2.jpg" class="card_img">
+						<h3 class="card_img_name">Lifestyle</h3>
+						<h2 class="card_name">Life tastes better with coffee</h2>
+						<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea</p>
+					</article>
+				</li>
+				<li>
+					<article class="card">
+						<img src="img/3.jpg" alt="3.jpg" class="card_img">
+						<h3 class="card_img_name">Lifestyle</h3>
+						<h2 class="card_name">American dream</h2>
+						<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea</p>
+					</article>
+				</li>
+				<li>
+					<article class="card">
+						<img src="img/4.jpg" alt="4.jpg" class="card_img">
+						<h3 class="card_img_name">Lifestyle</h3>
+						<h2 class="card_name">A day exploring the Alps</h2>
+						<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea</p>
+					</article>
+				</li>
+			</ul>
+			<button class="btn" onclick="window.scrollTo(0, 0);">Load more</button>
+		</main>
+		<footer>
+			<center>
+				<p>В задание было сказано без СSS оформления, но про JS -нечего не было сказано))
+				Нажми на кнопку..</p>
+				<input value="Нажми на кнопку.." id="button" type="button">
+			</center>
+		</footer>
 	<script>
   		button.onclick = function() {
   			console.log('Click');
@@ -73,72 +88,141 @@
   				style.type = 'text/css';
 
   				style.innerHTML = `
-  					body{
-					  with: 100%;
-					  hight: 100%;
-					  background: #ffffff;
+				  	@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+					@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+					/*Верстка через border-box*/
+					html {
+					box-sizing: border-box;
+					font-family: 'Playfair Display', serif;
+					color: #626262;
+					}
+
+					*, *::before, *::after {
+					box-sizing: inherit;
+					}
+
+
+
+					body {
+					margin: 0;  /*обнуляю дефолтный margin*/
+					}
+
+					.container {
+					width: 900px;
+					margin: 0 auto;
+					text-align: center;
 					}
 
 					h2 {
-					  font-size: 22px;
+					font-size: 20pt;
 					}
 
 					h3 {
-					  text-transform: uppercase;
-					  font-size: 11px;
+					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 100;
+					color: #b4ad9e;
+					}
+
+					a {
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 14pt;
+					transition: color 0.3s;
+					color: black;
+					}
+
+					a:hover,
+					a:focus {
+					color: #03a9f4;
 					}
 
 					p {
-					  font-size: 12px;
+					font-size: 14px;
 					}
 
-					.nav_bar{
-					  display: block;
-					  margin-left: auto;
-					  margin-right: auto;
-					  max-width: 900px;
+					img { 
+					display: block;
+					max-width: 100%;
+					height: auto;
 					}
 
-					.menu {
-					  list-style-type: none;
-					  display: flex;
-					  justify-content: space-between;
-					  padding: 100px 150px;
+					/*Меню сайта*/
+					.nav_bar {
+					padding: 78px 0px 100px 0px;
+					text-align: center;
 					}
 
-					.section__menu{
-					  text-decoration: none;
-					  text-transform: uppercase;
-					  color: #000;
+					.menu{
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0;
+					padding: 0;
 					}
 
-					.section__menu:active {
-					  color: #03a9f4;
+					.menu li {
+					display: inline-block;
 					}
 
-					.section__menu:hover{
-					  color: #03a9f4;
+					.menu li:not(:last-child){
+					margin-right: 120px;
 					}
 
-					.card_section{
-					  display: block;
-					  margin-left: auto;
-					  margin-right: auto;
-					  max-width: 900px;
+					/*Карточки*/
+					.card_menu {
+					display: inline-block;
+					vertical-align: middle;
+					text-align: left;
+					margin: 0;
+					padding: 0;
+					font-size: 0;/*Убераю зазор списка*/
 					}
 
-					.card_row{
-					  display: flex;
-					  justify-content: space-between;
-					}
-
-					.card{
-					  width: 400px;
-					  padding-bottom: 120px;
+					.card {
+					display: inline-block;
+					width: 400px;
+					margin-bottom: 130px;
+					margin-right: 100px;
+					padding: 10px;
+					transition: box-shadow 0.4s;
 					}
 
 					.card_img{
-					  width: inherit;
+					width: 380px;
+					height: auto;
+					}
+
+					/*Все елементі кроме 2рых*/
+					.card:nth-child(2n){
+					margin-right: 0px;
+					}
+
+					.card:hover{
+					box-shadow: 0 0 7px rgba(0,0,0,0.5);
+					}
+
+					.card_img_name {
+					font-family: 'Ubuntu', sans-serif;
+					}
+
+					.btn {
+					display: inline-block;
+					height: 60px;
+					width: 160px;
+					padding: 0px; /*обнуляю дефолтный паддинг*/
+					margin-bottom: 70px;
+					background-color: white;
+					border-width: 1px;
+					border-color: #626262;
+					font-family: 'Playfair Display', serif;
+					font-size: 15px;
+					transition: color 0.3s, background-color 0.3s;
+					}
+
+					.btn:hover{
+					color: white;
+					background-color: #626262;
 					}
 
 					.footer_btn{
@@ -152,11 +236,10 @@
 					}
 
 					footer{
-					  background-color: gray;
+					  background-color: lightgray;
 					  padding: 30px 0;
 					}
 					`;
-
   				head.appendChild(style);
   		};
 	</script>
