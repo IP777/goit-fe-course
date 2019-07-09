@@ -167,7 +167,7 @@ header{
 .slide_text {
   display: inline-block;
   margin-left: 14px;
-  margin-top: 8px;
+  margin-top: 9px;
   color: azure;
 }
 
@@ -175,7 +175,7 @@ header{
   background: rgba(214, 214, 214, 0.6);
   float: right;
   margin: 0;
-  padding: 8px;
+  padding: 9px;
 }
 
 /* Карточки новостей */
