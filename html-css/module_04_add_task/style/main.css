@@ -1,0 +1,137 @@
+body {
+    /* объявляем счетчик, задав
+    переменные с произвольными именами 
+    count_roman */ 
+    counter-reset: count_roman;
+  }
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after{
+    display: table;
+    content: '';
+    clear: both;
+  }
+
+/* первый список */
+.first_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.first_list li{
+    float: left;
+    margin-right: 47px;
+    margin-bottom: 30px;
+}
+
+.first_list li:nth-child(3n){
+    margin-right: 0;
+}
+
+.first_list_items{
+    width: 300px;
+    height: 270px;
+    opacity: 0.5;
+    border:1px solid;
+    border-radius: 5px;
+}
+
+.first_list_items:hover{
+    background-color: rgba(110, 160, 95, 0.37);
+    opacity: 1;
+}
+
+.img_items{
+    widows: 300px;
+    height: 200px;
+    border-radius: 5px 0 0;
+}
+
+.text_items{
+    margin-left: 5px;
+}
+
+/* второй список */
+.second_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20pt;
+    color: #0E1116;
+}
+
+.second_list li{
+    background-color: #88292F
+}
+
+.second_list li:nth-child(2n){
+    background-color: #5DB7DE;
+}
+
+.second_list li:nth-child(3n){
+    background-color: #0D5D56;
+}
+
+/* третий список */
+.third_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.third_items_href{
+    text-decoration: none;
+    font-size: 20pt;
+    color: cadetblue;
+}
+
+.third_items_href::before{
+    content: "\2192";
+    margin-right: 10px; 
+}
+
+/* четвертый список */
+.fourth_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fourth_list li {
+    /* инкрементируем счетчик для переменной headline */ 
+    counter-increment: count_roman;
+  }
+
+.fourh_items{
+    /* 198 потому что размер рамки 1+1px */
+    width: 198px;
+    padding: 60px 0;
+    border: 1px solid;
+    text-align: center;
+    float: left;
+}
+
+.fourh_items:hover{
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
+
+.fourh_items::before{
+    display: block;
+    margin-bottom: 10px;
+    content: counter(count_roman, upper-roman);
+    font-size: 16pt;
+    font-weight: 600;
+}
