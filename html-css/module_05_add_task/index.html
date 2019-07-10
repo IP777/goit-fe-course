@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Модуль 5 дополнительные задания</title>
+    <link rel="stylesheet" href="style/main.css">
+    
+</head>
+<body>
+    <section class="container">
+        <div id="pic_block">
+            &nbsp;
+            <!-- <input type="button"  value="Размер окна" onclick="win_func()" class="btn"> -->
+        </div>
+    </section>
+    <section class="container">
+        <div class="color_box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+</body>
+<script>
+    function win_func(){
+        var h = document.documentElement.clientWidth;
+        var doc_height = document.getElementById(pic_block)
+        // element.style.height=document.documentElement.clientWidth
+        alert (h,doc_height);
+    };
+</script>
+</html>

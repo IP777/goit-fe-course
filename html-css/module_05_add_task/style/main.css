@@ -1,0 +1,83 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+#pic_block{
+    background-color: lightgray;
+    height: 800px;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(https://placekitten.com/1000/800);
+}
+
+.color_box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-color: #424242;
+}
+
+.box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.box:nth-child(1) {
+    background-color: rgb(223, 52, 123);
+}
+
+.box:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(192, 131, 40);
+}
+
+.box:nth-child(3) {
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: rgb(30, 53, 180);
+}
+
+.box:nth-child(4) {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(223, 52, 123);
+}
+
+.box:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(192, 131, 40);
+}
+
+.box:nth-child(6) {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    background-color: rgb(30, 53, 180);
+}
+
+.box:nth-child(7) {
+    top: 100%;
+    transform: translateY(-100%);
+    background-color: rgb(223, 52, 123);
+}
+
+.box:nth-child(8) {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: rgb(192, 131, 40);
+}
+
+.box:nth-child(9) {
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+    background-color: rgb(30, 53, 180);
+}
