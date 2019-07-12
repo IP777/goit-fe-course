@@ -4,6 +4,59 @@
     margin-bottom: 60px;
 }
 
+a{
+    text-decoration: none;
+}
+
+/* Menu */
+nav{
+    position: fixed;
+    width: 960px;
+    top: 0;
+    padding: 20px;
+    background-color: rgba(240, 163, 70, 0.308);
+}
+
+.menu {
+    list-style: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+}
+
+.menu_item{
+    display: inline-block;
+}
+
+.menu_item:hover>.submenu{
+    display: block;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+}
+
+.submenu_item{
+    margin-top:20px;
+}
+
+.menu_item>a,
+.submenu_item>a{
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.menu_item>a:hover,
+.submenu_item>a:hover{
+    background-color: burlywood;
+}
+
 #pic_block{
     background-color: lightgray;
     height: 800px;

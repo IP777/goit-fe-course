@@ -7,25 +7,49 @@
     
 </head>
 <body>
-    <section class="container">
-        <div id="pic_block">
-            &nbsp;
-            <!-- <input type="button"  value="Размер окна" onclick="win_func()" class="btn"> -->
-        </div>
-    </section>
-    <section class="container">
-        <div class="color_box">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-    </section>
+    <header class="container">
+        <nav>
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="#">menu-item</a>
+                    <ul class="submenu">
+                        <li class="submenu_item"><a href="#">submenu-item</a></li>
+                        <li class="submenu_item"><a href="#section-2">submenu-item</a></li>
+                        <li class="submenu_item"><a href="#">submenu-item</a></li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="#">menu-item</a>
+                    <ul class="submenu">
+                        <li class="submenu_item"><a href="#">submenu-item</a></li>
+                        <li class="submenu_item"><a href="#">submenu-item</a></li>
+                        <li class="submenu_item"><a href="#">submenu-item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id ="section-1" class="container">
+            <div id="pic_block">
+                &nbsp;
+                <!-- <input type="button"  value="Размер окна" onclick="win_func()" class="btn"> -->
+            </div>
+        </section>
+        <section id ="section-2" class="container">
+            <div class="color_box">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </section>
+    </main>
 </body>
 <script>
     function win_func(){
