@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+@import url('Roboto:300,900&display=swap&subset=cyrillic');
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #2f2323;
+  }
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+/*--Меню сайта--*/
+header{
+    font-family: 'Roboto', sans-serif;
+    color: #2f2323;
+}
+
+.nav_bar{
+  /* background-color: lightblue; */
+  overflow: hidden;
+  padding: 38px 0 56px;
+}
+
+/* Логотип */
+.logo{
+    font-size: 30pt;
+    color: #555252;
+    font-weight: 300;
+    /* background-color: blanchedalmond; */
+    vertical-align: middle
+}
+
+.logo::before{
+    content: "M";
+    font-family: 'Roboto', sans-serif;
+    color: #1abc9c;
+    font-weight: 700;
+}
+
+/* Меню */
+.featured_products{
+margin-top: 35px;
+}
+
+.menu{
+    width: 601px;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    float: right;
+}
+
+.menu li {
+float: left;
+margin-right: 36px;
+list-style-type: none;
+}
+
+.menu li:last-child{
+margin-right: 0;
+}
+
+.section_menu{
+font-family: 'Open Sans', sans-serif;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 14pt;
+color: #0f0101;
+}
+
+.section_menu:hover,
+.section_menu:focus{
+color: #1abc9c;
+}
+
+/* Слайдер */
+
+.slider{
+    position: relative;
+    height: 600px;
+    background-color: #555252;
+}
+
+.btn_nav{
+    position: absolute;
+    top:50%;
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
+    border: 0;
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    background-color: #1abc9c;
+    /* opacity: 0.2; */
+}
+
+.btn_prev{
+    float: left;
+}
+
+.btn_next{
+    float: right;
+}
+
+.slides{
+    list-style-type: none;
+    padding: 0;
+
+}

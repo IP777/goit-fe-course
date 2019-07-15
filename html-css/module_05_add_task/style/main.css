@@ -59,10 +59,10 @@ nav{
 
 #pic_block{
     background-color: lightgray;
-    height: 800px;
+    height: 500px;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(https://placekitten.com/1000/800);
+        url(https://placekitten.com/1000/500);
 }
 
 .color_box{
@@ -71,6 +71,7 @@ nav{
     height: 400px;
     margin: auto;
     background-color: #424242;
+    text-align: center;
 }
 
 .box{
@@ -90,8 +91,7 @@ nav{
 }
 
 .box:nth-child(3) {
-    left: 100%;
-    transform: translateX(-100%);
+    right: 0;
     background-color: rgb(30, 53, 180);
 }
 
@@ -105,32 +105,30 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(192, 131, 40);
+    background-color: rgb(40, 192, 78);
 }
 
 .box:nth-child(6) {
     top: 50%;
-    left: 100%;
-    transform: translate(-100%, -50%);
-    background-color: rgb(30, 53, 180);
+    right:0;
+    transform: translateY(-50%);
+    background-color: rgb(180, 30, 30);
 }
 
 .box:nth-child(7) {
-    top: 100%;
-    transform: translateY(-100%);
-    background-color: rgb(223, 52, 123);
+    bottom: 0;
+    background-color: rgb(70, 33, 129);
 }
 
 .box:nth-child(8) {
-    top: 100%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -100%);
-    background-color: rgb(192, 131, 40);
+    transform: translateX(-50%);
+    background-color: rgb(211, 179, 150);
 }
 
 .box:nth-child(9) {
-    top: 100%;
-    left: 100%;
-    transform: translate(-100%, -100%);
-    background-color: rgb(30, 53, 180);
+    bottom: 0;
+    right: 0;
+    background-color: rgb(85, 89, 112);
 }
