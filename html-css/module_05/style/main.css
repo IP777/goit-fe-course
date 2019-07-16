@@ -48,7 +48,7 @@ img {
     clear: both;
 }
 
-/* Заголовки */
+/* Заголовки секций*/
 .headline{
     text-align: center;
     text-transform: uppercase;
@@ -72,9 +72,13 @@ img {
   }
 
 /*--Меню сайта--*/
+header{
+    background-color: white;
+}
+
 .nav_bar{
   overflow: hidden;
-  padding: 38px 0 56px;
+  padding: 30px 0 30px;
 }
 
 /* Логотип */
@@ -169,12 +173,14 @@ img {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #0f0101;
 }
 
 .slides_img{
     height: 600px;
     width: 100%;
     object-fit: cover;
+    opacity: .4;
 }
 
 .slides-txt{
@@ -183,7 +189,6 @@ img {
     left: 50%;
     transform: translate(-50%, -70%);
     color: white;
-    text-align: center;
 }
 
 .slides_name{
@@ -297,10 +302,11 @@ img {
     display: inline-block;
     width: 50px;
     height: 50px;
-    padding-top: 15px;
+    padding-top: 9px;
     border: 1px solid white;
     color: white;
     margin-bottom: 6px;
+    font-size: 25px;
 }
 
 .modal_item:hover{
@@ -312,6 +318,12 @@ img {
     width: 166px;
     background-color: #323232;
     margin-bottom: 0; 
+}
+
+.last_item_p{
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 7px;
 }
 
 /* Футтер сайта */
