@@ -3,90 +3,98 @@
 
 /*Верстка через border-box*/
 html {
-box-sizing: border-box;
-font-family: 'Playfair Display', serif;
-color: #626262;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  color: #626262;
 }
 
 *, *::before, *::after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-
-
 body {
-margin: 0;  /*обнуляю дефолтный margin*/
+  margin: 0;  /*обнуляю дефолтный margin*/
 }
 
 .container {
-width: 900px;
-margin: 0 auto;
-text-align: center;
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
-font-size: 20pt;
+  font-size: 20pt;
 }
 
 h3 {
-text-transform: uppercase;
-font-size: 14px;
-font-weight: 100;
-color: #b4ad9e;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 100;
+  color: #b4ad9e;
 }
 
 a {
-text-transform: uppercase;
-text-decoration: none;
-font-size: 14pt;
-transition: color 0.3s;
-color: black;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14pt;
+  transition: color 0.3s;
+  color: black;
 }
 
 a:hover,
 a:focus {
-color: #03a9f4;
+  color: #03a9f4;
 }
 
 p {
-font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
 
 img { 
-display: block;
-max-width: 100%;
-height: auto;
+  display: block;
+  width: 380px;
+  height: auto;
+}
+
+/* Секция main */
+main{
+  padding-bottom: 70px;
 }
 
 /*Меню сайта*/
 .nav_bar {
-padding: 78px 0px 100px 0px;
-text-align: center;
+  padding: 78px 0px 100px 0px;
+  text-align: center;
 }
 
 .menu{
-display: inline-block;
-vertical-align: middle;
-margin: 0;
-padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
 
 .menu li {
-display: inline-block;
+  display: inline-block;
 }
 
 .menu li:not(:last-child){
-margin-right: 120px;
+  margin-right: 120px;
 }
 
 /*Карточки*/
 .card_menu {
-display: inline-block;
-vertical-align: middle;
-text-align: left;
-margin: 0;
-padding: 0;
-font-size: 0;/*Убераю зазор списка*/
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin: 0; /*обнуляю дефолтный маджин*/
+  padding: 0; /*обнуляю дефолтный паддинг*/
+  margin-bottom: 130px;
+  font-size: 0;/*Убераю зазор списка*/
 }
 
 .card_menu li{
@@ -98,58 +106,45 @@ font-size: 0;/*Убераю зазор списка*/
 /*Все елементы кроме 2рых*/
 .card_menu li:nth-child(2n){
   margin-right: 0px;
-}  
+}
+
+.card_menu li:nth-last-child(-n+2){
+  margin-bottom: 0;
+}
 
 .card {
-width: 400px;
-padding: 10px;
-transition: box-shadow 0.4s;
+  width: 400px;
+  padding: 10px;
+  transition: box-shadow 0.4s;
 }
 
 .card_img{
-width: 380px;
-height: auto;
+  width: 380px;
+  height: auto;
 }
 
-
 .card:hover{
-box-shadow: 0 0 7px rgba(0,0,0,0.5);
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
 }
 
 .card_img_name {
-font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .btn {
-display: inline-block;
-height: 60px;
-width: 160px;
-padding: 0px; /*обнуляю дефолтный паддинг*/
-margin-bottom: 70px;
-background-color: white;
-border-width: 1px;
-border-color: #626262;
-font-family: 'Playfair Display', serif;
-font-size: 15px;
-transition: color 0.3s, background-color 0.3s;
-}
-
-.btn:hover{
-color: white;
-background-color: #626262;
-}
-
-.footer_btn{
+  display: inline-block;
   height: 60px;
   width: 160px;
-  font-size: 15px;
+  padding: 0px; /*обнуляю дефолтный паддинг*/
   background-color: white;
   border-width: 1px;
   border-color: #626262;
-  margin-bottom: 60px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-footer{
-  background-color: lightgray;
-  padding: 30px 0;
+.btn:hover{
+  color: white;
+  background-color: #626262;
 }
