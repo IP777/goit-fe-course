@@ -289,13 +289,9 @@ header{
     margin-right: 8px;
 }
 
-.card_modal li:nth-child(3n){
-    margin-right: 0;
-}
-
+.card_modal li:nth-child(3n),
 .card_modal li:last-child{
     margin-right: 0;
-
 }
 
 .modal_item{
