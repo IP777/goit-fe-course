@@ -1,0 +1,93 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* карточки соцсетей */
+.social_card_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.social_card_item{
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0;/*Убераю зазор списка*/
+    border: 1px solid lightgray;
+    transition: .2s linear;
+    margin-bottom: 30px;
+}
+
+.social_card_item:hover{
+    box-shadow: 4px 4px 4px rgba(83, 81, 80, 0.575);
+}
+
+.social_card_item:hover>.social_card_img{
+    transform: rotateZ(5deg);
+}
+
+.social_card_item:hover>.social_card_name{
+    color: #d96f92;
+    transform: scale(1.15, 1.15);
+}
+
+.social_card_item:hover>.btn_like{
+    width: 100%;
+    background-color: #d96f92;
+}
+
+.social_card_img{
+    width: 280px;
+    height: 360px;
+    transition: transform .2s linear;
+}
+
+.social_card_name{
+    display: inline-block;
+    font-size: 25px;
+    transition-property: 
+        color,
+        transform;
+    transition-duration: 0.3s, 0.2s;
+    line-height: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.social_card_text{
+    display: inline-block;
+    font-size: 15px;
+}
+
+.btn_like{
+    height: 40px;
+    width: 100px;
+    border: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #444444;
+    color: white;
+    transition: .2s linear;
+}
+
