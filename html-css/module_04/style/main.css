@@ -244,3 +244,7 @@ header{
   border-width: 1px;
   border-color: #626262;
   }
+
+  .div_flex{
+    display: flex;
+  }

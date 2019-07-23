@@ -132,3 +132,7 @@ nav{
     right: 0;
     background-color: rgb(85, 89, 112);
 }
+
+.div_flex{
+    display: flex;
+  }
