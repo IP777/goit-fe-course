@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i&display=swap&subset=latin-ext');
 /* Импорт шрифтов
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat', sans-serif;
@@ -165,12 +166,15 @@ header{
     padding: 0;/*Убираем отступы у списка*/
 }
 
+.card_list li{
+    margin-bottom: 80px; 
+}
+
 .card_item{
     display: flex;
     justify-content: flex-start;
     width: 380px;
     height: 66px;
-    margin-bottom: 80px; 
 }
 
 .card_img{
@@ -202,20 +206,43 @@ header{
 }
 
 /* Карточки команды */
+.team_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    list-style: none;
+    font-size: 0;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+}
+
 .team_items{
     display: inline-block;
     width: 380px;
     height: 550px;
-    background-color: aquamarine;
+    text-align: center;
 }
 
 .team_modal{
     display: none;
     width: 380px;
-    height: 470px;
+    height: 470px; 
 }
 
 .team_img{
     width: 380px;
     height: 470px;
+}
+
+.team_name{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.team_profession{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
 }
