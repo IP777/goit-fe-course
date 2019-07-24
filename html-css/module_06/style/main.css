@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext');
+/* Импорт шрифтов
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Kaushan Script', cursive; */
+
+:root{
+    --text-color-ligtblue: #95e1d3;
+    --text-color-gray: #999999;
+    --text-color-darkgray: #333333;
+    --color-pink: #f38181;
+    --bg-color-orange: #fce38a;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999999;
+    font-weight: 400;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #2f2323;
+}
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+/* Заголовки секций сайта */
+.headline{
+    display: block;
+    text-align: center;
+    color: var(--text-color-darkgray);
+    /* padding-top: 100px; */
+    padding-bottom: 41px;
+}
+
+.headline_first{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.headline_second{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+  
+.headline_second::after{
+    display: block;
+    margin: auto;
+    content: "";
+    height: 3px;
+    width: 60px;
+    margin-top: 32px;
+    background-color:  var(--color-pink);
+}
+
+.headline_text{
+    display: inline-block;
+    width: 940px;
+    color: #999999;
+}
+
+/* Шапка сайта */
+header{
+    padding-top: 30px;
+    padding-bottom:100px; 
+}
+
+.main_head{
+    display: flex;
+    justify-content: space-between; /*вырывнивание элементов в доль главной оси отступы равномерные*/
+    align-items: flex-end; /*выравниваю элементы от конца вспомогательной оси*/
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color-ligtblue);
+}
+
+.nav_list{
+    display: flex;
+    justify-content: space-between;
+    width: 490px;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+    padding-bottom: 0px;
+}
+
+.nav_item{
+    text-align: center;
+}
+
+.nav_link{
+    display: inline-block;
+    width: 100px;
+    color: var(--text-color-ligtblue);
+}
+
+.nav_link:hover{
+    color: var(--color-pink);
+}
+
+.nav_link:hover::after{
+    display: block;
+    content: "";
+    position: absolute;
+    transform: translateX(50%);
+    height: 3px;
+    width: 50px;
+    margin-top: 10px;
+    background-color: var(--color-pink);
+}
+
+/* Карточки Amazing Services */
+.card_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0;
+    text-transform: uppercase;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+}
+
+.card_item{
+    display: flex;
+    justify-content: flex-start;
+    width: 380px;
+    height: 66px;
+    margin-bottom: 80px; 
+}
+
+.card_img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 30px;
+}
+
+.card_container{
+    display: inline-block;
+    width: 260px;
+}
+
+.card_title{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--text-color-darkgray);
+    text-transform: uppercase;
+    line-height: 0;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+.card_text{
+    font-size: 10px;
+    text-transform: none;
+}
+
+/* Карточки команды */
+.team_items{
+    display: inline-block;
+    width: 380px;
+    height: 550px;
+    background-color: aquamarine;
+}
+
+.team_modal{
+    display: none;
+    width: 380px;
+    height: 470px;
+}
+
+.team_img{
+    width: 380px;
+    height: 470px;
+}
