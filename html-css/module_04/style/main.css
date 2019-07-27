@@ -19,6 +19,7 @@ body{
 }
 
 a{
+  display: inline-block;
   text-decoration: none;
   color: #2f2323;
 }
@@ -42,7 +43,7 @@ img {
   font-weight: 900;
   color: #515151;
   margin: 0;
-  margin-bottom: 82px; 
+  margin-bottom: 82px;
 }
 
 .headline::after{
@@ -68,32 +69,34 @@ header{
 }
 
 .nav_bar{
-  /* background-color: lightblue; */
   overflow: hidden;
-  padding: 38px 0 56px;
+  padding: 38px 0 86px;
 }
 
 /* Логотип */
 .logo{
+    display: inline-block;
     font-size: 30pt;
     color: #555252;
     font-weight: 300;
-    /* background-color: blanchedalmond; */
     vertical-align: middle
 }
 
+/* Вариант создания логотипа
 .logo::before{
     content: "M";
     font-family: 'Roboto', sans-serif;
     color: #1abc9c;
     font-weight: 700;
+} */
+
+.logo:first-letter {
+  font-family: 'Roboto', sans-serif;
+  color: #1abc9c;
+  font-weight: 700;
 }
 
 /* Меню */
-.featured_products{
-  margin-top: 35px;
-}
-
 .menu{
     width: 601px;
     margin: 0;
@@ -127,6 +130,9 @@ header{
 }
 
 /* ---Центральная часть сайта--- */
+.featured_products{
+  padding-bottom: 105px;
+}
 /* Карточки продаж */
 .main_style{
   margin-top: 100px;
@@ -146,6 +152,10 @@ header{
 
 .featured_list li:nth-child(4n){
   margin-right: 0;
+}
+
+.featured_list li:nth-last-child(-n+4){
+  margin-bottom: 0;
 }
 
 .featured_item{
@@ -179,8 +189,8 @@ header{
 }
 
 /* Карточки новостей */
-.news{
-  margin-top: 100px;
+.lastes_news{
+  padding-bottom: 80px;
 }
 
 .news_list {
@@ -203,13 +213,15 @@ header{
 
 .news_items {
   width: 350px;
-  height: 540px;
+  height: 500px;
 }
 
 .news_title {
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
   font-weight: 600;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .news_title::after{
@@ -222,29 +234,29 @@ header{
   background-color: #1abc9c;
 }
 
+.news_text{
+  margin: 0;
+  margin-bottom: 15px;
+}
+
 .btn {
   display: inline-block;
   height: 50px;
   width: 160px;
-  padding: 0px; /*обнуляю дефолтный паддинг*/
-  margin-bottom: 70px;
+  /*Центрирую текст в кнопке по вертикале паддингом по горизонтали vertical-align*/
+  padding: 14px 0;
+  text-align: center;
   background-color: #1abc9c;
-  border-width: 0;
   border-radius: 2px;
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
   font-weight: 600;
   color: azure;
   transition: color 0.3s, background-color 0.3s;
-  }
-  
-  .btn:hover{
+}
+
+.btn:hover{
   color: #515151;
   background-color: white;
-  border-width: 1px;
-  border-color: #626262;
-  }
-
-  .div_flex{
-    display: flex;
-  }
+  border: 1px solid #626262;
+}
