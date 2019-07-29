@@ -12,6 +12,7 @@ font-family: 'Kaushan Script', cursive; */
     --text-color-darkgray: #333333;
     --color-pink: #f38181;
     --bg-color-orange: #fce38a;
+    --modal-linear-gradient: linear-gradient(to top,rgba(252,227,138,0.8), rgba(243,129,129,0.8));
 }
 
 html{
@@ -40,6 +41,7 @@ p{
 a{
     text-decoration: none;
     color: #2f2323;
+    cursor: pointer;
 }
 
 img { 
@@ -211,7 +213,7 @@ main{
     text-transform: none;
 }
 
-/* Карточки команды */
+/* Карточки TEAM */
 .team_list{
     display: flex;
     justify-content: space-between;
@@ -229,15 +231,69 @@ main{
     text-align: center;
 }
 
+.team_items:hover>.team_modal{
+    /* display: block; */
+    opacity: 1;
+    transform: translate(-10px, -10px);
+}
+
+.team_items:hover>.team_img{
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px 0px var(--text-color-ligtblue);
+}
+
+/* Модальное окно */
 .team_modal{
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
     width: 380px;
-    height: 470px; 
+    height: 470px;
+    z-index: 1;
+    background: var(--modal-linear-gradient);
+    transition: 0.2s linear;
+}
+
+.team_m_list{
+    display: flex;
+    height: 470px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style: none;
+    font-size: 0;
+    margin: 0;/*Убираем отступы у списка*/
+    padding: 0;/*Убираем отступы у списка*/
+}
+
+.team_m_item{
+    border-right: 1px solid var(--color-pink);
+}
+
+.team_m_item:last-child{
+    border-right: 0;
+}
+
+.team_m_btn{
+    width: 55px;
+    height: 55px;
+    border: 0;
+    background: var(--bg-color-orange);
+    color: var(--color-pink);
+}
+
+.team_m_btn>i{
+    font-size: 25px;
+}
+
+.team_m_btn:hover{
+    background: var(--text-color-ligtblue);
 }
 
 .team_img{
     width: 380px;
     height: 470px;
+    transition: 0.2s linear;
 }
 
 .team_name{
@@ -251,10 +307,56 @@ main{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
+    font-style: italic;
 }
 
 /* футер сайта */
-footer{
+.footer{
     height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid var(--text-color-gray);
+}
+
+.foot_text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color-darkgray);
+}
+
+.foot_link{
+    color: var(--color-pink);
+}
+
+.subscripe_wrapper{
+    display: inline-block;
+    font-size: 0;
+}
+
+input[type="email"]{
+    width: 230px;
+    height: 40px;
+    font-style: italic;
+    border: 0;
+    border-left: 1px solid var(--text-color-gray);
+    border-top:  1px solid var(--text-color-gray);
+    border-bottom:  1px solid var(--text-color-gray);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-color-gray);
+    text-indent: 1em;
+}
+
+input[type="submit"]{
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: var(--text-color-ligtblue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
 }
