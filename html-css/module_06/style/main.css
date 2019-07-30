@@ -294,6 +294,7 @@ main{
 .team_img{
     width: 380px;
     height: 470px;
+    margin-bottom: 27px;
     transition: 0.2s linear;
 }
 
@@ -302,6 +303,7 @@ main{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    margin-bottom: 7px;
 }
 
 .team_profession{
