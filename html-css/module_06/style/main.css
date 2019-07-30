@@ -175,7 +175,7 @@ main{
     display: flex;
     justify-content: flex-start;
     width: 380px;
-    height: 66px;
+    /* height: 66px; */
 }
 
 .card_img{
@@ -191,13 +191,12 @@ main{
 }
 
 .card_title{
-    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: var(--text-color-darkgray);
     text-transform: uppercase;
-    line-height: 0;
-    margin-top: 4px;
+    margin: 0;
+    /* margin-top: -4px; */
     margin-bottom: 15px;
 }
 
@@ -212,7 +211,6 @@ main{
     justify-content: space-between;
     flex-wrap: nowrap;
     list-style: none;
-    font-size: 0;
     margin: 0;/*Убираем отступы у списка*/
     padding: 0;/*Убираем отступы у списка*/
 }
@@ -268,6 +266,8 @@ main{
 }
 
 .team_m_btn{
+    display: inline-block;
+    padding: 16px;
     width: 55px;
     height: 55px;
     border: 0;
