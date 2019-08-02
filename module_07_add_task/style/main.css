@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+:root{
+    --table-color: rgb(104, 104, 104);
+    --form-color: #767676;
+    --material-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --material-inset-box-shadow:  inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+/* Таблица */
+.wrapper {
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: var(--material-box-shadow);
+}
+
+caption{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+table{
+    display: block;
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid var(--table-color);;
+    background-color: var(--table-color);
+    font-size: 18px;
+    text-transform: none;
+    color: #ffffff;
+}
+
+td{
+    border: 1px solid;
+}
+
+th:nth-of-type(1), th:nth-of-type(1) {
+    width: 220px;
+    height: 50px;
+}
+
+th:nth-of-type(2),td:nth-of-type(2) {
+    width: 130px;
+    height: 50px;
+}
+
+th:nth-of-type(3),td:nth-of-type(3) {
+    width: 100px;
+    height: 50px;
+}
+
+
+/* Форма отправки */
+form{
+    width: 500px;
+    height: 550px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 30px;
+    border: 1px solid var(--form-color);
+    box-shadow: var(--material-box-shadow);
+}
+
+input[type='text'], input[type='email']{
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+    padding: 0 20px 0;
+    font-size: 20px;
+    border: 1px solid var(--form-color);
+    color: var(--form-color);
+    box-shadow: var(--material-inset-box-shadow);
+}
+
+textarea{
+    height: 220px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    color: var(--form-color);
+    box-shadow: var(--material-inset-box-shadow);
+}
+
+input[type='submit']{
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 60px;
+    border: 0;
+    padding: 0;
+    background-color: #e76262;
+    color: #ffffff;
+    font-size: 18px;
+}
