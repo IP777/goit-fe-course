@@ -209,6 +209,7 @@ h1,h2,h3,h4{
     font-family: 'Roboto', normal;
     font-size: 16px;
     color: var(--text-color-gray);
+    text-indent: 1em;
 }
 
 /* Секция контакты */
