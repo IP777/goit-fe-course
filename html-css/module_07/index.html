@@ -6,9 +6,81 @@
     <link rel="stylesheet" href="./style/main.css">
 </head>
     <body>
-       <p class="test">Golden</p> 
-       <p class="test1">Hello world</p> 
-       <p class="test2">Hello world</p> 
-       <p class="test3">Hello world</p> 
+       <header class="main_head container">
+           <a href="#" class="logo">Golden</a>
+           <nav class="nav_menu">
+               <ul class="nav_list">
+                   <li class="nav_item">
+                       <a href="#" class="nav_link">Home</a>
+                   </li>
+                   <li class="nav_item">
+                       <a href="#" class="nav_link">Services</a>
+                   </li>
+                   <li class="nav_item">
+                       <a href="#" class="nav_link">Portfolio</a>
+                   </li>
+                   <li class="nav_item">
+                       <a href="#" class="nav_link">About</a>
+                   </li>
+                   <li class="nav_item">
+                       <a href="#" class="nav_link">Contact</a>
+                   </li>
+               </ul>
+           </nav>
+       </header>
+       <main>
+           <section class="first_section container">
+            <div class="headline">
+                <h2 class="headline_first">Services</h2>
+                <h3 class="headline_second">Proin iaculis purus consequat sem cure.</h3>
+            </div>
+            <ul class="card_list">
+                <li class="card_item">
+                    <div class="card_icon" style="background-image: url(./img/icon/1.jpg)"></div>
+                    <div class="card_text">
+                        <h4>E-Commerce</h4>
+                        <p>Proin iaculis purus consequat sem cure 
+                            digni ssim. Donec porttitora entum suscipit 
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+                </li>
+                <li class="card_item">
+                    <div class="card_icon" style="background-image: url(./img/icon/2.jpg)"></div>
+                    <div class="card_text">
+                        <h4>Responsive Web</h4>
+                        <p>Proin iaculis purus consequat sem cure 
+                            digni ssim. Donec porttitora entum suscipit 
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+                </li>
+                <li class="card_item">
+                    <div class="card_icon" style="background-image: url(./img/icon/3.jpg)"></div>
+                    <div class="card_text">
+                        <h4>Web Security</h4>
+                        <p>Proin iaculis purus consequat sem cure 
+                            digni ssim. Donec porttitora entum suscipit 
+                            aenean rhoncus posuere odio in tincidunt.</p>
+                    </div>
+                </li>
+            </ul>
+           </section>
+           <section class="second_section">
+            <div class="headline headline_s_s">
+                <h2 class="headline_first headline_first_s_s">Contact Us</h2>
+                <h3 class="headline_second">Proin iaculis purus consequat sem cure.</h3>
+            </div>
+            <form action="#" method="GET" class="container">
+                <div class="form_wrapper">
+                    <div class="input_group">
+                        <input name="Name" type="text" placeholder="Your Name *" required>
+                        <input name="email" type="email" placeholder="Your Email *" required>
+                        <input name="Subject" type="text" placeholder="Subject">
+                    </div>
+                    <textarea name="Message" cols="30" rows="10" placeholder="Your Message *" required></textarea>
+                </div>
+                <input type="submit" value="Send Message">
+            </form>
+           </section>
+       </main>
     </body>
 </html> 
