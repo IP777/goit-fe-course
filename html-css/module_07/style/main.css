@@ -1,10 +1,47 @@
+
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* montserrat-800 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-800.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-slab-regular - latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+         url('../fonts/roboto-slab-v9-latin/roboto-slab-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-slab-v9-latin/roboto-slab-v9-latin-regular.woff') format('woff'); /* Modern Browsers */
+        }
+  /* font-family: 'Rochester', cursive; */
+    /* Rochester */
+@font-face {
+    font-family: 'Rochester';
+    font-style: cursive;
+    font-weight: 400;
+    src: local('Rochester'), local('Rochester'),
+         url('../fonts/Rochester/Rochester-Regular.ttf') format('truetype');
+  }
+  
+
 :root{
-    --text-color-ligtblue: #95e1d3;
-    --text-color-gray: #999999;
-    --text-color-darkgray: #333333;
-    --color-pink: #f38181;
-    --bg-color-orange: #fce38a;
-    --modal-linear-gradient: linear-gradient(to top,rgba(252,227,138,0.8), rgba(243,129,129,0.8));
+    --color-yellow: #fed136;
+    --text-color-black: #222222;
 }
 
 html{
@@ -19,10 +56,7 @@ html{
 
 body{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
     color: #999999;
-    font-weight: 400;
 }
 
 p{
@@ -49,4 +83,24 @@ h1,h2,h3,h4{
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Шапка сайта */
+p{
+    font-size: 30px;
+}
+.test{
+    font-family: 'Rochester', cursive;
+    font-style: oblique;
+}
+.test1{
+    font-family: 'Montserrat', normal;
+    font-weight: 800;
+}
+.test2{
+    font-family: 'Montserrat', normal;
+    font-weight: 400;
+}
+.test3{
+    font-family: 'Roboto', normal;
 }
