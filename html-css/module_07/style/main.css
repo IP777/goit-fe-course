@@ -39,21 +39,27 @@
          url('../fonts/roboto-slab-v9-latin/roboto-slab-v9-latin-regular.woff') format('woff'); /* Modern Browsers */
 }
 
-    /* Rochester */
+/* rochester-regular - latin */
 @font-face {
     font-family: 'Rochester';
-    font-style: cursive;
+    font-style: normal;
     font-weight: 400;
-    src:url('../fonts/Rochester/Rochester-Regular.ttf') format('truetype');
-}
+    src: local('Rochester Regular'), local('Rochester-Regular'),
+         url('../fonts/rochester-v10-latin/rochester-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/rochester-v10-latin/rochester-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
 
-    /* Rochester */
-    @font-face {
-        font-family: 'ArefRuqaa';
-        font-style: normal;
-        font-weight: 400;
-        src: url('../fonts/Aref_Ruqaa/ArefRuqaa-Regular.ttf') format('truetype');
-    }
+/* aref-ruqaa-regular - latin */
+@font-face {
+    font-family: 'Aref Ruqaa';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Aref Ruqaa Regular'), local('ArefRuqaa-Regular'),
+         url('../fonts/aref-ruqaa-v8-latin/aref-ruqaa-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aref-ruqaa-v8-latin/aref-ruqaa-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
 
 :root{
     --color-yellow: #fed136;
@@ -137,7 +143,8 @@ h1,h2,h3,h4{
 
 /* Логотип */
 .logo{
-    font-family: 'Rochester', cursive;
+    font-family: 'Rochester', normal;
+    font-weight: 400;
     font-style: oblique;
     font-size: 35px;
     color: var(--color-yellow);
