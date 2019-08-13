@@ -159,13 +159,14 @@ h1,h2,h3,h4{
 .nav_list{
     display: flex;
     justify-content: space-between;
-    width: 480px;
+    min-width: 480px;
     list-style: none;  
     margin: 0;/*Убираем отступы у списка*/
     padding: 0;/*Убираем отступы у списка*/
 }
 
 .nav_link{
+    display: block;
     text-transform: uppercase;
     font-family: 'Montserrat', normal;
     font-weight: 600;
@@ -203,6 +204,26 @@ h1,h2,h3,h4{
 
 .card_text{
     text-align: center;
+}
+
+.card_text::before{
+    display: block;
+    content: "";
+    height: 115px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.icon1::before{
+    background-image: url(../img/icon/1.jpg);
+}
+
+.icon2::before{
+    background-image: url(../img/icon/2.jpg);
+}
+
+.icon3::before{
+    background-image: url(../img/icon/3.jpg);
 }
 
 .card_text>h4{
