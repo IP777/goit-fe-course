@@ -208,22 +208,21 @@ h1,h2,h3,h4{
 
 .card_text::before{
     display: block;
-    content: "";
-    height: 115px;
+    padding-bottom: 20px;
     background-repeat:no-repeat;
     background-position:center;
 }
 
 .icon1::before{
-    background-image: url(../img/icon/1.jpg);
+    content: url(../img/icon/1.jpg);
 }
 
 .icon2::before{
-    background-image: url(../img/icon/2.jpg);
+    content: url(../img/icon/2.jpg);
 }
 
 .icon3::before{
-    background-image: url(../img/icon/3.jpg);
+    content: url(../img/icon/3.jpg);
 }
 
 .card_text>h4{
