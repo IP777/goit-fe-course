@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400&display=swap');
+
+:root{
+    --text-color-white: #ffffff;
+    --text-color-black: #333333;
+    --text-color-gray: #747474;
+    --color-red: #ff4e50;
+}
+
 html{
     box-sizing: border-box;
 }
@@ -10,6 +19,9 @@ html{
 
 body{
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 p{
@@ -34,6 +46,249 @@ h1,h2,h3,h4{
 }
 
 .container {
-    max-width: 960px;
+    max-width: 280px;
     margin: 0 auto;
+    text-align: center;
 }
+
+/*---------- Шапка сайта -----------*/
+/* Верхний блок шапки сайта */
+header{
+    padding: 0;
+    height: 540px;
+    background: url(../img/bg-320.jpg) center no-repeat;
+}
+
+.head_block{
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px;
+}
+
+.logo{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--text-color-white); 
+}
+
+.e_menu{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.log_in, .sing_up{
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color-white);
+}
+
+.sing_up{
+    border: 2px solid var(--text-color-white);
+    border-radius: 20px;
+}
+
+/* Центральный блок шапки сайта */
+.m_b_title{
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--text-color-white);
+}
+
+.m_b_text{
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 15px;
+    color: var(--text-color-white);
+}
+
+.m_b_button{
+    height: 40px;
+    padding: 10px 50px;
+    border: 0;
+    border-radius: 30px;
+    background-color: var(--color-red);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color-white);
+}
+/*---------- Шапка сайта -----------*/
+
+/*---------- Центральная часть сайта -----------*/
+
+/* Отступы блока сверху снизу */
+.main_body{
+    padding: 50px 0;
+}
+
+.main_title{
+    padding-bottom: 20px;
+}
+
+.card_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card_item{
+    width: 200px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.card_avatar{
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+
+.card_avatar_wrapper:after{
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    transform: translate(125px, -50px);
+    border: 4px solid var(--text-color-white);
+    border-radius: 50%;
+}
+
+.icon_1:after{
+    background: url(../img/icon/icon-1.jpg) center;
+}
+
+.icon_2:after{
+    background: url(../img/icon/icon-2.jpg) center;
+}
+
+.icon_3:after{
+    background: url(../img/icon/icon-3.jpg) center;
+}
+
+.icon_4:after{
+    background: url(../img/icon/icon-4.jpg) center;
+}
+
+
+.card_name{
+    padding-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card_text{
+    padding: 0 7px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--text-color-gray);
+}
+
+.foot_btn{
+    padding: 10px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-red);
+    background-color: #ffffff;
+    border: 2px solid var(--color-red);
+    border-radius: 30px;
+}
+
+.foot_btn:hover{
+    background-color: var(--color-red);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+/*---------- Центральная часть сайта -----------*/
+
+/*---------- Медиазапрос для планшетов -----------*/
+@media (min-width: 768px){
+    .container {
+        max-width: 530px;
+    }
+
+    header{
+        background: url(../img/bg-768.jpg) center no-repeat;
+    }
+
+    .head_block{
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0 auto;
+        /* Шапка сайта с логотипом имеет свою ширину в отличие от основного контейнера
+        ,по этому пришлось вынести ее в отдельный блок*/
+        max-width: 660px;
+    }
+
+    .logo{
+        padding: 8px;
+    }
+
+    .m_b_title{
+        font-size: 50px;
+    }
+
+    .m_b_text{
+        font-size: 22px;
+    }
+
+    .card_list{
+        justify-content: space-around;
+    }
+
+    /* В макете блоки карточек разной величины в зависимости от масштаба */
+    .card_item{
+        width: 240px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/*---------- Медиазапрос для планшетов -----------*/
+
+/*---------- Медиазапрос для больших экранов -----------*/
+@media (min-width: 1440px){
+    .container {
+        max-width: 940px;
+    }
+
+    header{
+        background: url(../img/bg-1440.jpg) center no-repeat;
+    }
+
+    .head_block{
+        /* Шапка сайта с логотипом имеет свою ширину в отличие от основного контейнера
+        ,по этому пришлось вынести ее в отдельный блок*/
+        max-width: 940px;
+    }
+
+    /* В макете блоки карточек разной величины в зависимости от масштаба */
+    .card_item{
+        width: 220px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/*---------- Медиазапрос для больших экранов -----------*/
