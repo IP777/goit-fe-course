@@ -56,16 +56,17 @@ h1,h2,h3,h4{
 header{
     padding: 0;
     height: 540px;
-    background: url(../img/bg-320.jpg) center no-repeat;
+    background:url(../img/bg-768.jpg) center no-repeat;
+    background-color: gray;
 }
 
 .head_block{
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0 20px;
+    padding: 20px 0 26px;
 }
 
 .logo{
@@ -77,13 +78,17 @@ header{
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--text-color-white); 
+    color: var(--text-color-white);
+    cursor: pointer; 
 }
 
 .e_menu{
     display: flex;
     justify-content: space-between;
-    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 120px;
 }
 
 .log_in, .sing_up{
@@ -98,6 +103,10 @@ header{
 .sing_up{
     border: 2px solid var(--text-color-white);
     border-radius: 20px;
+}
+
+.sing_up:hover{
+    background-color: rgba(32, 31, 31, 0.246);
 }
 
 /* Центральный блок шапки сайта */
@@ -128,6 +137,11 @@ header{
     font-weight: 600;
     font-size: 12px;
     color: var(--text-color-white);
+}
+
+.m_b_button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid var(--text-color-white);
 }
 /*---------- Шапка сайта -----------*/
 
@@ -231,20 +245,23 @@ header{
     }
 
     header{
-        background: url(../img/bg-768.jpg) center no-repeat;
+        background: url(../img/bg-1440.jpg) center no-repeat;
     }
 
     .head_block{
         flex-direction: row;
-        align-items: flex-start;
         margin: 0 auto;
-        /* Шапка сайта с логотипом имеет свою ширину в отличие от основного контейнера
+        /* Шапка сайта с логотипом имеет свою ширину контейнера в отличие от основного контейнера
         ,по этому пришлось вынести ее в отдельный блок*/
         max-width: 660px;
     }
 
-    .logo{
-        padding: 8px;
+    .head_block{
+        padding-bottom: 140px;
+    }
+
+    .e_menu{
+        padding-bottom: 0px;
     }
 
     .m_b_title{
@@ -269,17 +286,13 @@ header{
 /*---------- Медиазапрос для планшетов -----------*/
 
 /*---------- Медиазапрос для больших экранов -----------*/
-@media (min-width: 1440px){
+@media (min-width: 960px){
     .container {
         max-width: 940px;
     }
 
-    header{
-        background: url(../img/bg-1440.jpg) center no-repeat;
-    }
-
     .head_block{
-        /* Шапка сайта с логотипом имеет свою ширину в отличие от основного контейнера
+        /* Шапка сайта с логотипом имеет свою ширину контейнера в отличие от основного контейнера
         ,по этому пришлось вынести ее в отдельный блок*/
         max-width: 940px;
     }
