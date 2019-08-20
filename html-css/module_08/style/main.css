@@ -97,6 +97,8 @@ header{
     font-weight: 600;
     font-size: 12px;
     color: var(--text-color-white);
+    /* Убираем границу вокруг ссылок  */
+    outline: none; 
 }
 
 .sing_up{
