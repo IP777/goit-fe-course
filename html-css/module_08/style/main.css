@@ -61,7 +61,6 @@ header{
 }
 
 .head_block{
-    /* height: 200px; */
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -105,7 +104,9 @@ header{
     border-radius: 20px;
 }
 
-.sing_up:hover{
+/* Добавил focus для мобильной версии сайта */
+.sing_up:hover,
+.sing_up:focus{
     background-color: rgba(32, 31, 31, 0.246);
 }
 
@@ -139,7 +140,9 @@ header{
     color: var(--text-color-white);
 }
 
-.m_b_button:hover{
+/* Добавил focus для мобильной версии сайта */
+.m_b_button:hover,
+.m_b_button:focus{
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid var(--text-color-white);
 }
@@ -231,7 +234,9 @@ header{
     border-radius: 30px;
 }
 
-.foot_btn:hover{
+/* Добавил focus для мобильной версии сайта */
+.foot_btn:hover,
+.foot_btn:focus{
     background-color: var(--color-red);
     border-color: #ffffff;
     color: #ffffff;
