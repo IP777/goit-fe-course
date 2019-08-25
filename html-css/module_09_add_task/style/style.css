@@ -1,3 +1,132 @@
-body{
-    background-color: azure;
+.title{
+    text-align: center;
+    margin: 10px;
+}
+
+/* Задание 1 */
+.container{
+    min-width: 320px;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.content{
+    height: 100px;
+    background-color: #fbf281;
+}
+
+.sidebar{
+    height: 100px;
+    background-color: #b8e986;
+}
+
+/* Задание 2*/
+.grid_item{
+    height: 100px;
+    background-color: #f8d69d;
+}
+
+.grid_item-2{
+    height: 100px;
+    background-color: #f79da8;
+}
+
+/* Задание 4*/
+.task4{
+    display: grid;
+    grid-template-areas: 
+        "pic-1 pic-1 pic-2 pic-2"
+        "pic-1 pic-1 pic-3 pic-6"
+        "pic-4 pic-5 pic-5 pic-6"
+        "pic-4 pic-5 pic-5 pic-6";
+        /* Высота линии */
+        grid-template-rows: repeat(4, 1fr);
+        /* Ширина колонки */
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+        height: 410px;
+        margin-bottom: 50px;
+        background: black;
+}
+
+#pic-1{
+    grid-area: pic-1;
+    background: url(https://placeimg.com/500/200/arch);
+}
+
+#pic-2{
+    grid-area: pic-2;
+    background: url(https://placeimg.com/500/100/arch);
+}
+
+#pic-3{
+    grid-area: pic-3;
+    background: url(https://placeimg.com/240/90/arch);
+}
+
+#pic-4{
+    grid-area: pic-4;
+    background: url(https://placeimg.com/240/190/arch);
+}
+
+#pic-5{
+    grid-area: pic-5;
+    background: url(https://placeimg.com/480/190/arch);
+}
+
+#pic-6{
+    grid-area: pic-6;
+    background: url(https://placeimg.com/240/290/arch);
+}
+
+/* Задание 4 другой способ создания css таблицы*/
+.task4_1{
+    display: grid;
+    /* Высота линии */
+    grid-template-rows: repeat(4, 1fr);
+    /* Ширина колонки */
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    height: 410px;
+    margin-bottom: 50px;
+    background: black;
+}
+
+#task4_1_pic-1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background: url(https://placeimg.com/500/200/arch);
+}
+
+#task4_1_pic-2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background: url(https://placeimg.com/500/100/arch);
+}
+
+#task4_1_pic-3{
+    grid-column-start: auto;
+    grid-column-end: auto;
+    background: url(https://placeimg.com/240/90/arch);
+}
+
+#task4_1_pic-4{
+    grid-column: 1/2;
+    grid-row: 3/5;
+    background: url(https://placeimg.com/240/190/arch);
+}
+
+#task4_1_pic-5{
+    grid-column: 2/4;
+    grid-row: 3/5;
+    background: url(https://placeimg.com/480/190/arch);
+}
+
+#task4_1_pic-6{
+    grid-column: 4/5;
+    grid-row: 2/5;
+    background: url(https://placeimg.com/240/290/arch);
 }
