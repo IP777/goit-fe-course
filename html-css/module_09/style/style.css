@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400&display=swap');
+
+:root{
+    --text-color-white: #ffffff;
+    --text-color-black: #333333;
+    --text-color-gray: #747474;
+    --color-red: #ff4e50;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,h2,h3,h4{
+    margin: 0;
+}
+
+.container {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*---------- Шапка сайта -----------*/
+/* Верхний блок шапки сайта */
+header{
+    padding: 0;
+    height: 540px;
+    background:url(../img/bg-768.jpg) center no-repeat;
+    background-color: gray;
+}
+
+.head_block{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 26px;
+}
+
+.logo{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--text-color-white);
+    cursor: pointer; 
+}
+
+.e_menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 120px;
+}
+
+.log_in, .sing_up{
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color-white);
+    /* Убираем границу вокруг ссылок  */
+    outline: none; 
+}
