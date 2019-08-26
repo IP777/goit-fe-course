@@ -45,11 +45,11 @@ h1,h2,h3,h4{
     margin: 0;
 }
 
-.container {
+/* .container {
     max-width: 280px;
     margin: 0 auto;
     text-align: center;
-}
+} */
 
 /*---------- Шапка сайта -----------*/
 /* Верхний блок шапки сайта */
@@ -61,10 +61,6 @@ header{
 }
 
 .head_block{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px 0 26px;
 }
 
@@ -79,11 +75,12 @@ header{
     text-transform: uppercase;
     color: var(--text-color-white);
     cursor: pointer; 
+    text-align: center;
 }
 
 .e_menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -100,3 +97,93 @@ header{
     /* Убираем границу вокруг ссылок  */
     outline: none; 
 }
+
+
+.sing_up{
+    border: 2px solid var(--text-color-white);
+    border-radius: 20px;
+}
+
+/* Добавил focus для мобильной версии сайта */
+.sing_up:hover,
+.sing_up:focus{
+    background-color: rgba(32, 31, 31, 0.246);
+}
+
+/* Центральный блок шапки сайта */
+.main_block{
+    text-align: center;
+}
+
+.m_b_title{
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--text-color-white);
+}
+
+.m_b_text{
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 15px;
+    color: var(--text-color-white);
+}
+
+.m_b_button{
+    height: 40px;
+    padding: 10px 50px;
+    border: 0;
+    border-radius: 30px;
+    background-color: var(--color-red);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color-white);
+}
+
+/* Добавил focus для мобильной версии сайта */
+.m_b_button:hover,
+.m_b_button:focus{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid var(--text-color-white);
+    /* Убираем границу вокруг ссылок  */
+    outline: none; 
+}
+/*---------- Шапка сайта -----------*/
+
+
+/*---------- Медиазапрос для планшетов -----------*/
+@media (min-width: 768px){
+    /* .container {
+        max-width: 530px;
+    } */
+
+    header{
+        background: url(../img/bg-1440.jpg) center no-repeat;
+    }
+
+    .head_block{
+        padding-bottom: 140px;
+    }
+
+    .logo{
+        text-align: unset;
+    }
+
+    .e_menu{
+        padding-bottom: 0px;
+        justify-content: flex-end;
+    }
+
+    .m_b_title{
+        font-size: 50px;
+    }
+
+    .m_b_text{
+        font-size: 22px;
+    }
+}
+/*---------- Медиазапрос для планшетов -----------*/
