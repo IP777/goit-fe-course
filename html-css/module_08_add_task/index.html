@@ -27,12 +27,21 @@
             <aside class="t_sidebar"></aside>
         </div>
     </div>
-    <!-- Работает нормально но без max-width не хотел срабатывать -->
+ 
     <div class="container">
         <picture>
             <source media="(min-width: 480px) and (max-width: 768px)" srcset="./img/parrot.jpeg">
             <source media="(min-width: 768px) and (max-width: 1200px)" srcset="./img/palm.jpeg">
             <source media="(min-width: 1200px)" srcset="./img/yacht.jpeg">
+            <img src="./img/beach.jpeg" alt="beach" class="resize_img">
+        </picture>
+    </div>
+
+    <div class="container">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./img/parrot.jpeg">
+            <source media="(max-width: 1200px)" srcset="./img/palm.jpeg">
+            <source media="(max-width: 1600px)" srcset="./img/yacht.jpeg">
             <img src="./img/beach.jpeg" alt="beach" class="resize_img">
         </picture>
     </div>
