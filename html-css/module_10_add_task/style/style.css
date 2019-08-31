@@ -1,13 +1,33 @@
-body{
-    background-color: var(--color-red);
-}
-
 .container {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
-    text-align: -moz-center;
 }
+
 .title{
     padding-bottom: 30px;
+    padding-top: 20px;
 }
+
+img{
+    display: inline-block;
+}
+picture{
+    margin: 0 auto;
+}
+/* Задание 2 */
+.box {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    background: url('https://placeimg.com/400/200/arch') no-repeat;
+  }
+
+  /* min-resolution: 192dpi - Минимальная плотность экрана Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .box {
+        background: url('https://placeimg.com/800/400/arch') no-repeat;
+    }
+}
+  
+  
