@@ -125,6 +125,7 @@ header{
 .m_b_button{
     height: 40px;
     padding: 10px 50px;
+    margin: 0 auto;
     border: 0;
     border-radius: 30px;
     background-color: var(--color-red);
@@ -132,6 +133,7 @@ header{
     font-weight: 600;
     font-size: 12px;
     color: var(--text-color-white);
+    cursor: pointer;
 }
 
 .m_b_button:hover,
@@ -218,6 +220,7 @@ header{
 
 .foot_btn{
     padding: 10px 40px;
+    margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -252,6 +255,13 @@ header{
 @media (min-width: 960px){
     .container {
         max-width: 940px;
+    }
+}
+
+/*Медиазапрос для мобилок*/
+@media (min-width: 320px){
+    .main_title{
+        font-size: 28px;
     }
 }
 
