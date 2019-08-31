@@ -45,11 +45,6 @@ h1,h2,h3,h4{
     margin: 0;
 }
 
-/* .container {
-    margin: 0 auto;
-    text-align: center;
-} */
-
 /*---------- Шапка сайта -----------*/
 /* Верхний блок шапки сайта */
 header{
@@ -241,8 +236,26 @@ header{
 }
 /*---------- Центральная часть сайта -----------*/
 
+/* Кастомизированные контейнеры Bootstrap */
+@media (min-width: 320px){
+    .container {
+        max-width: 280px;
+    }
+}
 
-/*---------- Медиазапрос для планшетов -----------*/
+@media (min-width: 768px){
+    .container {
+        max-width: 530px;
+    }
+}
+
+@media (min-width: 960px){
+    .container {
+        max-width: 940px;
+    }
+}
+
+/*Медиазапрос для планшетов и больше*/
 @media (min-width: 768px){
     header{
         background: url(../img/bg-1440.jpg) center no-repeat;
@@ -264,4 +277,3 @@ header{
         font-size: 22px;
     }
 }
-/*---------- Медиазапрос для планшетов -----------*/
