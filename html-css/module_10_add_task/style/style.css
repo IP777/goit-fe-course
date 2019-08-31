@@ -26,7 +26,7 @@ picture{
   /* min-resolution: 192dpi - Минимальная плотность экрана Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .box {
-        background: url('https://placeimg.com/800/400/arch') no-repeat;
+        background: url('https://placeimg.com/800/400/people') no-repeat;
     }
 }
   
