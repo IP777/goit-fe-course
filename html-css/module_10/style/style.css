@@ -1,3 +1,5 @@
+
+
 :root{
     --color-red: #f38181;
     --color-yellow: #fce38a;
@@ -5,12 +7,8 @@
     --color-blue: #95e1d3;
     --color-white: #ffffff;
     --linear-gradient-orange: linear-gradient(to top,rgba(252,227,138,0.8), rgba(243,129,129,0.8));
-    --text-color-ligtblue: #95e1d3;
     --text-color-gray: #999999;
     --text-color-darkgray: #333333;
-    --color-pink: #f38181;
-    --bg-color-orange: #fce38a;
-    --modal-linear-gradient: linear-gradient(to top,rgba(252,227,138,0.8), rgba(243,129,129,0.8));
 }
 
 .container {
@@ -30,14 +28,14 @@
 .headline__first{
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     padding-bottom: 10px;
 }
 
 .headline__second{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 27px;
 }
@@ -49,7 +47,7 @@
     height: 3px;
     width: 60px;
     margin-top: 32px;
-    background-color:  var(--color-pink);
+    background-color:  var(--color-red);
 }
 
 .headline__text{
@@ -78,7 +76,7 @@
     border: 2px solid var(--color-white);
     background-color: rgba(255, 255, 255, 0);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
     color: var(--text-color-white);
@@ -164,9 +162,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    font-weight: 600;
-    margin: 0;/*Убираем отступы у списка*/
-    padding: 0;/*Убираем отступы у списка*/
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
     padding-bottom: 0px;
 }
 
@@ -213,9 +211,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    font-weight: 600;
-    margin: 0;/*Убираем отступы у списка*/
-    padding: 0;/*Убираем отступы у списка*/
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
     padding-bottom: 0px;
 }
 
@@ -243,7 +241,6 @@
 .i_link__icon--hover:hover{
     fill: var(--color-yellow);
 }
-
 
 /*--------------- Центральная часть сайта ---------------*/
 main{
@@ -353,8 +350,7 @@ main{
 }
 
 .team_items:hover>.team_modal{
-    /* display: block; */
-    opacity: 1; /*Использовал opacity так как несрабатывал transition*/
+    opacity: 1;
     -webkit-transform: translate(-10px, -10px);
         -ms-transform: translate(-10px, -10px);
             transform: translate(-10px, -10px);
@@ -364,8 +360,8 @@ main{
     -webkit-transform: translate(-10px, -10px);
         -ms-transform: translate(-10px, -10px);
             transform: translate(-10px, -10px);
-    -webkit-box-shadow: 10px 10px 0px 0px var(--text-color-ligtblue);
-            box-shadow: 10px 10px 0px 0px var(--text-color-ligtblue);
+    -webkit-box-shadow: 10px 10px 0px 0px var(--color-blue);
+            box-shadow: 10px 10px 0px 0px var(--color-blue);
 }
 
 /* Модальное окно */
@@ -375,7 +371,7 @@ main{
     width: 380px;
     height: 470px;
     z-index: 1;
-    background: var(--modal-linear-gradient);
+    background: var(--linear-gradient-orange);
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
@@ -396,12 +392,12 @@ main{
         flex-wrap: nowrap;
     list-style: none;
     font-size: 0;
-    margin: 0;/*Убираем отступы у списка*/
-    padding: 0;/*Убираем отступы у списка*/
+    margin: 0;
+    padding: 0;
 }
 
 .team_m_list__item{
-    border-right: 1px solid var(--color-pink);
+    border-right: 1px solid var(--color-red);
 }
 
 .team_m_list__item:last-child{
@@ -414,7 +410,7 @@ main{
     width: 55px;
     height: 55px;
     border: 0;
-    background: var(--bg-color-orange);
+    background: var(--color-yellow);
 }
 
 .item_link--hover:hover{
@@ -445,14 +441,14 @@ main{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 7px;
 }
 
 .team_items__profession{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -480,7 +476,7 @@ main{
 
 .text__link{
     display: inline-block;
-    color: var(--color-pink);
+    color: var(--color-red);
 }
 
 .subscripe_wrapper{
@@ -498,7 +494,7 @@ input[type="email"]{
     border-bottom:  1px solid var(--text-color-gray);
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--text-color-gray);
     text-indent: 1em;
 }
@@ -507,11 +503,11 @@ input[type="submit"]{
     width: 150px;
     height: 40px;
     border: 0;
-    background-color: var(--text-color-ligtblue);
+    background-color: var(--color-blue);
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 700;
-    color: white;
+    color: var(--color-white);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
