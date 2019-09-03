@@ -206,6 +206,16 @@ font-family: 'Kaushan Script', cursive; */
     padding: 0 20px;
 }
 
+.sl_list__item--hover:hover::after{
+    display: block;
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    margin-top: 10px;
+    background-color: var(--color-yellow);
+}
+
 /* Блок кнопок */
 .i_link__icon{
     height: 17px;
