@@ -23,7 +23,8 @@ font-family: 'Kaushan Script', cursive; */
     margin: 0 auto;
     text-align: center;
 }
-/* Заголовки секций сайта */
+
+/* ---------Блоки заголовков сайта сайта------- */
 .headline{
     display: block;
     text-align: center;
@@ -31,22 +32,22 @@ font-family: 'Kaushan Script', cursive; */
     padding-bottom: 41px;
 }
 
-.headline_first{
+.headline__first{
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
     font-weight: 300;
     padding-bottom: 10px;
 }
 
-.headline_second{
+.headline__second{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 27px;
 }
   
-.headline_second::after{
+.headline__second--after::after{
     display: block;
     margin: auto;
     content: "";
@@ -56,20 +57,56 @@ font-family: 'Kaushan Script', cursive; */
     background-color:  var(--color-pink);
 }
 
-.headline_text{
+.headline__text{
     display: inline-block;
     width: 940px;
     color: #999999;
     margin-bottom: 55px;
 }
 
-/* Шапка сайта */
+/* Модификаторы для главного заголовка */
+.headline--change_color{
+    color: var(--color-white)
+}
+
+.headline__first--resize{
+    font-size: 50px;
+}
+
+.headline__second--resize{
+    font-size: 130px;
+}
+
+.headline__button{
+    height: 40px;
+    padding: 10px 50px;
+    border: 2px solid var(--color-white);
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color-white);
+}
+
+.headline__button:hover,
+.headline__button:focus{
+    background-color: var(--color-white);
+    color: var(--text-color-darkgray);
+    outline: none; 
+}
+/* ---------Блоки заголовков сайта сайта------- */
+
+
+
+/* ---------Шапка сайта----------- */
+
+/* Блок шапки сайта */
 .main_head{
     height: 1000px;
     background: var(--linear-gradient-orange);  
 }
 
-.main_head:before{
+.main_head--add_back:before{
     content: "";
     position: absolute;
     height: inherit;
@@ -79,14 +116,16 @@ font-family: 'Kaushan Script', cursive; */
     z-index: -1;
 }
 
+/* Обертка-шапка сайта */
 .head_block{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 30px;
-    padding-bottom:100px; 
+    padding-bottom:120px; 
 }
 
+/* Блок логотипа сайта */
 .logo{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -94,15 +133,18 @@ font-family: 'Kaushan Script', cursive; */
 }
 
 .logo__link{
+    padding-left: 20px;
     color: var(--color-white);
 }
 
+/* Обертка навигации сайта */
 .nav_menu{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Блок навигации по страницам сайта */
 .link_list{
     display: flex;
     justify-content: space-between;
@@ -130,11 +172,11 @@ font-family: 'Kaushan Script', cursive; */
     color: var(--color-white);
 }
 
-.link_list__item:hover>.nav_link{
+.link_list__item--hover:hover>.nav_link{
     color: var(--color-yellow);
 }
 
-.link_list__item:hover::after{
+.link_list__item--hover:hover::after{
     display: block;
     content: "";
     position: absolute;
@@ -145,6 +187,7 @@ font-family: 'Kaushan Script', cursive; */
     background-color: var(--color-yellow);
 }
 
+/* Блок-обертка для кнопок */
 .sl_list{
     display: flex;
     justify-content: space-between;
@@ -162,6 +205,7 @@ font-family: 'Kaushan Script', cursive; */
     padding: 0 20px;
 }
 
+/* Блок кнопок */
 .i_link__icon{
     height: 17px;
     width: 17px;
@@ -172,16 +216,17 @@ font-family: 'Kaushan Script', cursive; */
     fill: var(--color-yellow);
 }
 
-/* тело сайта */
+
+/*--------------- Центральная часть сайта ---------------*/
 main{
     padding-bottom: 80px;
     padding-top:30px; 
 }
 
-/* Карточки Amazing Services */
+/* Блок-обертка для карточек Amazing Services */
 .card_list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
@@ -191,54 +236,74 @@ main{
     padding: 0;/*Убираем отступы у списка*/
 }
 
-.card_list li{
+.card_list__item_wrap{
     margin-bottom: 80px; 
 }
 
+/* Блок карточки Amazing Services */
 .card_item{
-    display: flex;
-    justify-content: flex-start;
+    padding-left: 60px;
+    padding-right: 65px;
     width: 380px;
-    /* height: 66px; */
 }
 
-.card_icon{
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-repeat:no-repeat;
-    background-position:top center;
+.card_container--before::before{
+    display: block;
+    position: absolute;
+    transform: translateX(-60px);
+    padding: 12px;
+}
+
+.icon-1::before{
+    content: url(../img/card/1.png);
+}
+
+.icon-2::before{
+    content: url(../img/card/2.png);
+}
+
+.icon-3::before{
+    content: url(../img/card/3.png);
+}
+
+.icon-4::before{
+    content: url(../img/card/4.png);
+}
+
+.icon-5::before{
+    content: url(../img/card/5.png);
+}
+.icon-6::before{
+    content: url(../img/card/6.png);
 }
 
 .card_container{
-    display: inline-block;
-    width: 260px;
+    display: block;
     text-align: start;
 }
 
-.card_title{
+.card_container__title{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: var(--text-color-darkgray);
     text-transform: uppercase;
     margin: 0;
-    /* margin-top: -4px; */
     margin-bottom: 15px;
 }
 
-.card_text{
+.card_container__text{
     font-size: 10px;
     text-transform: none;
 }
 
-/* Карточки TEAM */
+/*  Блок-обертка для карточек TEAM */
 .team_list{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
     list-style: none;
-    margin: 0;/*Убираем отступы у списка*/
-    padding: 0;/*Убираем отступы у списка*/
+    margin: 0;
+    padding: 0;
 }
 
 .team_items{
@@ -254,15 +319,14 @@ main{
     transform: translate(-10px, -10px);
 }
 
-.team_items:hover>.team_img{
+.team_items:hover>.team_items__img{
     transform: translate(-10px, -10px);
     box-shadow: 10px 10px 0px 0px var(--text-color-ligtblue);
 }
 
 /* Модальное окно */
 .team_modal{
-    /* display: none; */
-    opacity: 0; /*Использовал opacity так как несрабатывал transition*/
+    opacity: 0;
     position: absolute;
     width: 380px;
     height: 470px;
@@ -283,40 +347,46 @@ main{
     padding: 0;/*Убираем отступы у списка*/
 }
 
-.team_m_item{
+.team_m_list__item{
     border-right: 1px solid var(--color-pink);
 }
 
-.team_m_item:last-child{
+.team_m_list__item:last-child{
     border-right: 0;
 }
 
-.team_m_btn{
+.item_link{
     display: inline-block;
-    padding: 16px;
+    padding: 13px;
     width: 55px;
     height: 55px;
     border: 0;
     background: var(--bg-color-orange);
-    color: var(--color-pink);
 }
 
-.team_m_btn>i{
-    font-size: 25px;
+.item_link--hover:hover{
+    background: var(--color-red);
 }
 
-.team_m_btn:hover{
-    background: var(--text-color-ligtblue);
+.item_link--hover:hover>.i_link__icon{
+    fill: var(--color-white);
 }
 
-.team_img{
+.i_link__icon--resize_red{
+    width: 25px;
+    height: 25px;
+    fill: var(--color-red);
+}
+
+/* Фотография имя проффесия на карточке */
+.team_items__img{
     width: 380px;
     height: 470px;
     margin-bottom: 27px;
     transition: 0.2s linear;
 }
 
-.team_name{
+.team_items__name{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -324,7 +394,7 @@ main{
     margin-bottom: 7px;
 }
 
-.team_profession{
+.team_items__profession{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -340,14 +410,15 @@ main{
     border-top: 1px solid var(--text-color-gray);
 }
 
-.foot_text{
+.footer__text{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 400;
     color: var(--text-color-darkgray);
 }
 
-.foot_link{
+.text__link{
+    display: inline-block;
     color: var(--color-pink);
 }
 
