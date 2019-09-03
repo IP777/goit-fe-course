@@ -479,12 +479,12 @@ main{
     color: var(--color-red);
 }
 
-.subscripe_wrapper{
+.subscripe_menu{
     display: inline-block;
     font-size: 0;
 }
 
-input[type="email"]{
+.subscripe_menu__email{
     width: 230px;
     height: 40px;
     font-style: italic;
@@ -499,7 +499,7 @@ input[type="email"]{
     text-indent: 1em;
 }
 
-input[type="submit"]{
+.subscripe_menu__submit{
     width: 150px;
     height: 40px;
     border: 0;
