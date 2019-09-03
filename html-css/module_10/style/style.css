@@ -463,3 +463,9 @@ input[type="submit"]{
     font-weight: 700;
     color: white;
 }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .main_head--add_back:before{
+        background: url(../img/head-banner-lagre.jpg) no-repeat center;
+    }
+}
