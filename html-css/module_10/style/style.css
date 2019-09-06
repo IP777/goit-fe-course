@@ -100,7 +100,7 @@
     background: var(--linear-gradient-orange);  
 }
 
-.main_head--add_back:before{
+.main_head:before{
     content: "";
     position: absolute;
     height: inherit;
@@ -170,7 +170,6 @@
 
 .link_list__item{
     text-align: center;
-    width: 100px;
 }
 
 .link_list__item:last-child{
@@ -180,13 +179,14 @@
 .nav_link{
     display: inline-block;
     color: var(--color-white);
+    width: 100px;
 }
 
-.link_list__item--hover:hover>.nav_link{
+.nav_link--hover:hover{
     color: var(--color-yellow);
 }
 
-.link_list__item--hover:hover::after{
+.nav_link--hover:hover::after{
     display: block;
     content: "";
     position: absolute;
@@ -219,16 +219,6 @@
 
 .sl_list__item{
     padding: 0 20px;
-}
-
-.sl_list__item--hover:hover::after{
-    display: block;
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 20px;
-    margin-top: 10px;
-    background-color: var(--color-yellow);
 }
 
 /* Блок кнопок */
