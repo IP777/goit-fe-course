@@ -1,0 +1,12 @@
+.text{
+    font-family: $font-Roboto;
+    color: $font-color;
+    font-size: $font-size;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.text:hover{
+    color: $font-color-hover;
+    @include font-size_line-height(22px, 2);
+}
