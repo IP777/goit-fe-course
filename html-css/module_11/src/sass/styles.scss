@@ -2,3 +2,13 @@
    Import partials below
 */
 @import './normalize';
+@import './base/fonts.scss';
+@import './utils/variables.scss';
+@import './utils/mixin.scss';
+@import './components/logo.scss';
+@import './components/buttons.scss';
+@import './components/gallery.scss';
+@import './components/submenu.scss';
+@import './layout/header.scss';
+@import './layout/main.scss';
+@import './layout/footer.scss';
