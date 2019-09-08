@@ -1,0 +1,4 @@
+@mixin font-size_line-height($f_s, $l_h) {
+    font-size: $f_s;
+    line-height: $l_h; 
+}
