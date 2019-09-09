@@ -1,0 +1,63 @@
+/* Обертка навигации сайта */
+.nav_menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Блок навигации по страницам сайта */
+    .link_list{
+        @extend %list-type-vertical-menu;
+        // margin-top: 10px;
+        .link_list__item{
+            text-align: center;
+            margin-top: 10px;
+            &:last-child{
+                padding-right: 0;
+            }
+            .nav_link{
+                display: inline-block;
+                color: $color-white;
+                padding: 0 10px;
+                &::after{
+                    display: block;
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    margin-top: 10px;
+                    background-color: $color-yellow;
+                    transform: scaleX(0);
+                    transition: transform 200ms ease-in-out;
+                }
+                &:hover{
+                    color: $color-yellow;
+                }
+                &--hover:hover::after{
+                    color: $color-yellow;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+    /* Блок-обертка для кнопок */
+    .sl_list{
+        @extend %list-type-vertical-menu;
+        padding-bottom: 0px;
+        &__item{
+            padding: 0 20px;
+            /* Блок кнопок */
+            .i_link__icon{
+                height: 17px;
+                width: 17px;
+                fill: $color-white;
+                &--hover:hover{
+                    fill: $color-yellow;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/* Блок-обертка для карточек Amazing Services */
+.card_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    @include font(Montserrat, 12px, 400, uppercase );
+    margin: 0;
+    padding: 0;
+    &__item_wrap{
+        margin-bottom: 80px; 
+        .card_item{
+            padding-left: 60px;
+            padding-right: 65px;
+            width: 380px;
+            .card_container{
+                display: block;
+                text-align: start;
+                &--before::before{
+                    display: block;
+                    position: absolute;
+                    transform: translateX(-60px);
+                    padding: 12px;
+                }
+                
+                &__title{
+                    @include font(Montserrat, 15px, 700, uppercase );
+                    color: $text-color-darkgray;
+                    margin: 0;
+                    margin-bottom: 15px;
+                }
+                
+                &__text{
+                    @include font(Montserrat, 10px, 400, none );
+                }
+            }
+            
+        }
+    }
+}
+
+.icon-1::before{
+    content: url(../images/card/1.png);
+}
+
+.icon-2::before{
+    content: url(../images/card/2.png);
+}
+
+.icon-3::before{
+    content: url(../images/card/3.png);
+}
+
+.icon-4::before{
+    content: url(../images/card/4.png);
+}
+
+.icon-5::before{
+    content: url(../images/card/5.png);
+}
+.icon-6::before{
+    content: url(../images/card/6.png);
+}

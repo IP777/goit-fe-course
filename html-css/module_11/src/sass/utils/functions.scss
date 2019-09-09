@@ -1,0 +1,12 @@
+%list-type-vertical-menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+    @include font(Montserrat, 12px, 700, uppercase );
+    margin: 0;
+    padding: 0;
+}

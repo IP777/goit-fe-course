@@ -2,6 +2,7 @@
    Import partials below
 */
 @import './normalize';
+@import './My_normalize.scss';
 @import './base/fonts.scss';
 @import './utils/variables.scss';
 @import './utils/mixin.scss';
@@ -9,6 +10,11 @@
 @import './components/buttons.scss';
 @import './components/gallery.scss';
 @import './components/submenu.scss';
+@import './components/headline.scss';
+@import './components/card-service.scss';
+@import './components/card-team.scss';
+@import './utils/functions.scss';
+@import './layout/container.scss';
 @import './layout/header.scss';
 @import './layout/main.scss';
 @import './layout/footer.scss';

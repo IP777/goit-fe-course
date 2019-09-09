@@ -1,0 +1,95 @@
+/*  Блок-обертка для карточек TEAM */
+.team_list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .team_items{
+        display: inline-block;
+        width: 380px;
+        height: 550px;
+        text-align: center;
+        &:hover>.team_modal{
+            opacity: 1;
+            transform: translate(-10px, -10px);
+        }
+        
+        &:hover>.team_items__img{
+            transform: translate(-10px, -10px);
+            box-shadow: 10px 10px 0px 0px $color-blue;
+        }
+        /* Модальное окно */
+        .team_modal{
+            opacity: 0;
+            position: absolute;
+            width: 380px;
+            height: 470px;
+            z-index: 1;
+            background: $linear-gradient-orange;
+            transition: 0.2s linear;
+            .team_m_list{
+                display: flex;
+                height: 470px;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                list-style: none;
+                font-size: 0;
+                margin: 0;
+                padding: 0;
+                &__item{
+                    border-right: 1px solid $color-red;
+                    .item_link{
+                        display: inline-block;
+                        padding: 13px;
+                        width: 55px;
+                        height: 55px;
+                        border: 0;
+                        background: $color-yellow;
+                        &--hover:hover{
+                            background: $color-red;
+                        }
+                        &--hover:hover>.social_icon{
+                            fill: $color-white;
+                        }
+                    }
+                }
+                &__item:last-child{
+                    border-right: 0;
+                }
+            }
+        }
+        /* Фотография имя проффесия на карточке */
+        &__img{
+            width: 380px;
+            height: 470px;
+            margin-bottom: 27px;
+            -webkit-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear;
+        }
+
+        &__name{
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        &__profession{
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+}
+
+.social_icon{
+    width: 25px;
+    height: 25px;
+    fill: $color-red;
+}
