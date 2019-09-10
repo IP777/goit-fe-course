@@ -703,9 +703,6 @@ h4 {
 
 .team_list .team_items .team_modal .team_m_list {
   height: 470px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   font-size: 0;
 }
 
@@ -766,11 +763,20 @@ h4 {
 .nav_menu .link_list,
 .nav_menu .sl_list,
 .card_list,
-.team_list,
-.team_list .team_items .team_modal .team_m_list {
+.team_list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team_list .team_items .team_modal .team_m_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;

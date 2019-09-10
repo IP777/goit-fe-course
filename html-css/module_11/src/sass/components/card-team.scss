@@ -27,10 +27,7 @@
             transition: 0.2s linear;
             .team_m_list{
                 height: 470px;
-                @extend %list-type-vertical-menu;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: nowrap;
+                @extend %list-type-vertical-menu-center;
                 font-size: 0;
                 &__item{
                     border-right: 1px solid $color-red;
