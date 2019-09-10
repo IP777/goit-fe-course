@@ -1,15 +1,9 @@
 /* футер сайта */
 .footer{
     height: 63px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid $text-color-gray;
     &__text{
         @include font(Montserrat, 15px, 400, none );
@@ -25,22 +19,14 @@
         &__email{
             width: 230px;
             height: 40px;
-            font-style: italic;
             border: 0;
             border-left: 1px solid $text-color-gray;
             border-top:  1px solid $text-color-gray;
             border-bottom:  1px solid $text-color-gray;
             @include font(Roboto, 15px, 400, none );
+            font-style: italic;
             color: $text-color-gray;
             text-indent: 1em;
-        }
-        &__submit{
-            width: 150px;
-            height: 40px;
-            border: 0;
-            background-color: $color-blue;
-            @include font(Montserrat, 15px, 700, none );
-            color: $color-white;
         }
     }
 }

@@ -1,12 +1,8 @@
 /* Блок-обертка для карточек Amazing Services */
 .card_list{
-    display: flex;
+    @extend %list-type-vertical-menu;
     justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
     @include font(Montserrat, 12px, 400, uppercase );
-    margin: 0;
-    padding: 0;
     &__item_wrap{
         margin-bottom: 80px; 
         .card_item{

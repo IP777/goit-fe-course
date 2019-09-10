@@ -1,0 +1,24 @@
+.headline-btn{
+    height: 40px;
+    padding: 10px 20px;
+    border: 2px solid $color-white;
+    background-color: rgba(255, 255, 255, 0);
+    @include font(Montserrat, 12px, 700, uppercase);
+    color: $color-white;
+    &:hover,
+    &:focus{
+        background-color: $color-white;
+        color: $text-color-darkgray;
+        outline: none; 
+    }
+}
+
+.submit-btn{
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: $color-blue;
+    @include font(Montserrat, 15px, 700, none );
+    color: $color-white;
+    cursor: pointer;
+}

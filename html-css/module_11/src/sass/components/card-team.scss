@@ -1,11 +1,7 @@
 /*  Блок-обертка для карточек TEAM */
 .team_list{
-    display: flex;
+    @extend %list-type-vertical-menu;
     justify-content: space-around;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     .team_items{
         display: inline-block;
         width: 380px;
@@ -30,15 +26,12 @@
             background: $linear-gradient-orange;
             transition: 0.2s linear;
             .team_m_list{
-                display: flex;
                 height: 470px;
+                @extend %list-type-vertical-menu;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: nowrap;
-                list-style: none;
                 font-size: 0;
-                margin: 0;
-                padding: 0;
                 &__item{
                     border-right: 1px solid $color-red;
                     .item_link{
@@ -66,23 +59,16 @@
             width: 380px;
             height: 470px;
             margin-bottom: 27px;
-            -webkit-transition: 0.2s linear;
-            -o-transition: 0.2s linear;
             transition: 0.2s linear;
         }
 
         &__name{
-            text-transform: uppercase;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
+            @include font(Montserrat, 16px, 700, uppercase );
             margin-bottom: 7px;
         }
 
         &__profession{
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
+            @include font(Roboto, 14px, 400, none );
             font-style: italic;
         }
     }

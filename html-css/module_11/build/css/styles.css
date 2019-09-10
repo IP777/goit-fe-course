@@ -432,6 +432,38 @@ h4 {
   color: #ffffff;
 }
 
+.headline-btn {
+  height: 40px;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.headline-btn:hover,
+.headline-btn:focus {
+  background-color: #ffffff;
+  color: #333333;
+  outline: none;
+}
+
+.submit-btn {
+  width: 150px;
+  height: 40px;
+  border: 0;
+  background-color: #95e1d3;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 /* Обертка навигации сайта */
 
 .nav_menu {
@@ -440,6 +472,13 @@ h4 {
   align-items: center;
   /* Блок навигации по страницам сайта */
   /* Блок-обертка для кнопок */
+}
+
+.nav_menu .link_list {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .nav_menu .link_list .link_list__item {
@@ -478,6 +517,10 @@ h4 {
 }
 
 .nav_menu .sl_list {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
   padding-bottom: 0px;
 }
 
@@ -550,38 +593,14 @@ h4 {
   margin-bottom: 55px;
 }
 
-.headline__button {
-  height: 40px;
-  padding: 10px 20px;
-  border: 2px solid #ffffff;
-  background-color: rgba(255, 255, 255, 0);
-  font-family: Montserrat, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.headline__button:hover,
-.headline__button:focus {
-  background-color: #ffffff;
-  color: #333333;
-  outline: none;
-}
-
 /* Блок-обертка для карточек Amazing Services */
 
 .card_list {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
 }
 
 .card_list__item_wrap {
@@ -650,12 +669,7 @@ h4 {
 /*  Блок-обертка для карточек TEAM */
 
 .team_list {
-  display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .team_list .team_items {
@@ -688,15 +702,11 @@ h4 {
 }
 
 .team_list .team_items .team_modal .team_m_list {
-  display: flex;
   height: 470px;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  list-style: none;
   font-size: 0;
-  margin: 0;
-  padding: 0;
 }
 
 .team_list .team_items .team_modal .team_m_list__item {
@@ -732,17 +742,18 @@ h4 {
 }
 
 .team_list .team_items__name {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 7px;
 }
 
 .team_list .team_items__profession {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
+  text-transform: none;
   font-style: italic;
 }
 
@@ -753,14 +764,14 @@ h4 {
 }
 
 .nav_menu .link_list,
-.nav_menu .sl_list {
+.nav_menu .sl_list,
+.card_list,
+.team_list,
+.team_list .team_items .team_modal .team_m_list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
-  font-family: Montserrat, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
@@ -832,7 +843,6 @@ main {
 .footer .subscripe_menu__email {
   width: 230px;
   height: 40px;
-  font-style: italic;
   border: 0;
   border-left: 1px solid #999999;
   border-top: 1px solid #999999;
@@ -841,20 +851,9 @@ main {
   font-size: 15px;
   font-weight: 400;
   text-transform: none;
+  font-style: italic;
   color: #999999;
   text-indent: 1em;
-}
-
-.footer .subscripe_menu__submit {
-  width: 150px;
-  height: 40px;
-  border: 0;
-  background-color: #95e1d3;
-  font-family: Montserrat, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: none;
-  color: #ffffff;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {

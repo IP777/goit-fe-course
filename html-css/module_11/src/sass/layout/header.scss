@@ -20,15 +20,9 @@
 
 /* Обертка-шапка сайта */
 .head_block{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
     padding-top: 30px;
-    padding-bottom:160px; 
+    padding-bottom: 160px; 
 }
