@@ -35,25 +35,6 @@
     }
 }
 
-.icon-1::before{
-    content: url(../images/card/1.png);
-}
-
-.icon-2::before{
-    content: url(../images/card/2.png);
-}
-
-.icon-3::before{
-    content: url(../images/card/3.png);
-}
-
-.icon-4::before{
-    content: url(../images/card/4.png);
-}
-
-.icon-5::before{
-    content: url(../images/card/5.png);
-}
-.icon-6::before{
-    content: url(../images/card/6.png);
-}
+ $icon-massive: 1, 2, 3, 4, 5, 6;
+ 
+ @include generate-icon ($icon-massive);
