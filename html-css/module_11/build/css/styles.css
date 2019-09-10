@@ -553,7 +553,7 @@ h4 {
 }
 
 .headline__first {
-  font-family: "Kaushan Script", sans-serif;
+  font-family: 'Kaushan Script', cursive;
   font-size: 24px;
   font-weight: 400;
   text-transform: none;
@@ -643,27 +643,27 @@ h4 {
 }
 
 .icon-1::before {
-  content: url(../images/card/1.png);
+  content: url("../images/card/1.png");
 }
 
 .icon-2::before {
-  content: url(../images/card/2.png);
+  content: url("../images/card/2.png");
 }
 
 .icon-3::before {
-  content: url(../images/card/3.png);
+  content: url("../images/card/3.png");
 }
 
 .icon-4::before {
-  content: url(../images/card/4.png);
+  content: url("../images/card/4.png");
 }
 
 .icon-5::before {
-  content: url(../images/card/5.png);
+  content: url("../images/card/5.png");
 }
 
 .icon-6::before {
-  content: url(../images/card/6.png);
+  content: url("../images/card/6.png");
 }
 
 /*  Блок-обертка для карточек TEAM */

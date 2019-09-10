@@ -1,6 +1,21 @@
-@mixin font($font-family, $font-size, $font-weight, $text-transform ) {
-    font-family: $font-family, sans-serif;
+@mixin font($font-family, $font-size, $font-weight, $text-transform ) { 
+    @if $font-family == 'Montserrat'{
+        font-family: $font-family, sans-serif;
+    }@else if $font-family == 'Roboto'{
+        font-family: $font-family, sans-serif;
+    }@else{
+        font-family: 'Kaushan Script', cursive;
+    }
     font-size: $font-size;
     font-weight: $font-weight;
     text-transform: $text-transform;
+}
+
+
+@mixin generate-icon ($icon-massive) {
+    @each $i in $icon-massive {
+        .icon-#{$i}::before {
+            content: url('../images/card/#{$i}.png');
+        }
+      }
 }
