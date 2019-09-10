@@ -6,7 +6,7 @@
     /* Блок навигации по страницам сайта */
     .link_list{
         @extend %list-type-vertical-menu;
-        @include font(Montserrat, 12px, 700, uppercase );
+        @include font('Montserrat', 12px, 700, uppercase );
         // margin-top: 10px;
         .link_list__item{
             text-align: center;
@@ -41,7 +41,7 @@
     /* Блок-обертка для кнопок */
     .sl_list{
         @extend %list-type-vertical-menu;
-        @include font(Montserrat, 12px, 700, uppercase );
+        @include font('Montserrat', 12px, 700, uppercase );
         padding-bottom: 0px;
         &__item{
             padding: 0 20px;

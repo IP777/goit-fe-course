@@ -421,7 +421,7 @@ h4 {
 }
 
 .logo {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: none;
@@ -475,7 +475,7 @@ h4 {
 }
 
 .nav_menu .link_list {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -517,7 +517,7 @@ h4 {
 }
 
 .nav_menu .sl_list {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -553,7 +553,7 @@ h4 {
 }
 
 .headline__first {
-  font-family: Kaushan Script, sans-serif;
+  font-family: "Kaushan Script", sans-serif;
   font-size: 24px;
   font-weight: 400;
   text-transform: none;
@@ -565,7 +565,7 @@ h4 {
 }
 
 .headline__second {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -597,7 +597,7 @@ h4 {
 
 .card_list {
   justify-content: center;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -626,7 +626,7 @@ h4 {
 }
 
 .card_list__item_wrap .card_item .card_container__title {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
@@ -636,7 +636,7 @@ h4 {
 }
 
 .card_list__item_wrap .card_item .card_container__text {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 10px;
   font-weight: 400;
   text-transform: none;
@@ -739,7 +739,7 @@ h4 {
 }
 
 .team_list .team_items__name {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -747,7 +747,7 @@ h4 {
 }
 
 .team_list .team_items__profession {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: none;
@@ -829,7 +829,7 @@ main {
 }
 
 .footer__text {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 400;
   text-transform: none;
@@ -853,7 +853,7 @@ main {
   border-left: 1px solid #999999;
   border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
   text-transform: none;

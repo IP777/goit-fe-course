@@ -1,5 +1,5 @@
 .logo{
-    @include font(Montserrat, 30px, 700, none );
+    @include font('Montserrat', 30px, 700, none );
     .logo__link{
         padding-left: 20px;
         color: $color-white;

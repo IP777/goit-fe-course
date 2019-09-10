@@ -2,7 +2,7 @@
 .card_list{
     @extend %list-type-vertical-menu;
     justify-content: center;
-    @include font(Montserrat, 12px, 400, uppercase );
+    @include font('Montserrat', 12px, 400, uppercase );
     &__item_wrap{
         margin-bottom: 80px; 
         .card_item{
@@ -20,14 +20,14 @@
                 }
                 
                 &__title{
-                    @include font(Montserrat, 15px, 700, uppercase );
+                    @include font('Montserrat', 15px, 700, uppercase );
                     color: $text-color-darkgray;
                     margin: 0;
                     margin-bottom: 15px;
                 }
                 
                 &__text{
-                    @include font(Montserrat, 10px, 400, none );
+                    @include font('Montserrat', 10px, 400, none );
                 }
             }
             

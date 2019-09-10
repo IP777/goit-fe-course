@@ -8,14 +8,14 @@
         color: $color-white;
     }
     &__first{
-        @include font(Kaushan Script, 24px, 400, none);
+        @include font('Kaushan Script', 24px, 400, none);
         padding-bottom: 10px;
         &--resize{
             font-size: 50px;
         }
     }
     &__second{
-        @include font(Montserrat, 30px, 700, uppercase );
+        @include font('Montserrat', 30px, 700, uppercase );
         padding-bottom: 27px;
         &--resize{
             font-size: 130px;

@@ -60,12 +60,12 @@
         }
 
         &__name{
-            @include font(Montserrat, 16px, 700, uppercase );
+            @include font('Montserrat', 16px, 700, uppercase );
             margin-bottom: 7px;
         }
 
         &__profession{
-            @include font(Roboto, 14px, 400, none );
+            @include font('Roboto', 14px, 400, none );
             font-style: italic;
         }
     }

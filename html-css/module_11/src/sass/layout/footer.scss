@@ -6,7 +6,7 @@
     align-items: center;
     border-top: 1px solid $text-color-gray;
     &__text{
-        @include font(Montserrat, 15px, 400, none );
+        @include font('Montserrat', 15px, 400, none );
         color: $text-color-darkgray;
         .text__link{
             display: inline-block;
@@ -23,7 +23,7 @@
             border-left: 1px solid $text-color-gray;
             border-top:  1px solid $text-color-gray;
             border-bottom:  1px solid $text-color-gray;
-            @include font(Roboto, 15px, 400, none );
+            @include font('Roboto', 15px, 400, none );
             font-style: italic;
             color: $text-color-gray;
             text-indent: 1em;
