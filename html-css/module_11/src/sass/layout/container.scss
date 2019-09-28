@@ -3,3 +3,13 @@
     margin: 0 auto;
     text-align: center;
  }
+
+ /*Медиазапрос для мобилок*/
+@media (min-width: 320px){
+    max-width: 320px;
+}
+
+/*Медиазапрос для планшетов и больше*/
+@media (min-width: 768px){
+    max-width: 768px;
+}
