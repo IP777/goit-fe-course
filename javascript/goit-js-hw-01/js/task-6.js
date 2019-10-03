@@ -22,5 +22,7 @@ export function task6(){
 
       if(total){
         alert(`Общая сумма чисел равна ${total}`);
-      }   
+      }  
+      
+      
 }
