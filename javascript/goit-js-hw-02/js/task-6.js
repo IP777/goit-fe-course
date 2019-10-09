@@ -1,4 +1,5 @@
 export function task6(){
+  'user strict'
   let input;
   const numbers = [];
   let total = 0;
@@ -11,7 +12,7 @@ export function task6(){
       input = Number(input);
       if (input){
         numbers.push(Number.parseInt(input))
-        console.log (numbers);
+        //console.log (numbers);
       }else{
         choiсe = confirm (`Вы ввели неправильное число. Продолжить?`);
         if (!choiсe){
