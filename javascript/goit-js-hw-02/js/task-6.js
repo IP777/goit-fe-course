@@ -1,28 +1,30 @@
 export function task6(){
-    let input;
-    let total = 0;
-    let userInput;
+  let input;
+  const numbers = [];
+  let total = 0;
+  let choiсe;
 
-    while (true) {
-        userInput = prompt('Введите число');
-      
-        if (userInput === null) {
+  while (true) {
+    input = prompt('Введите произвольное число:');
+
+    if(input != null){
+      input = Number(input);
+      if (input){
+        numbers.push(Number.parseInt(input))
+        console.log (numbers);
+      }else{
+        choiсe = confirm (`Вы ввели неправильное число. Продолжить?`);
+        if (!choiсe){
           break;
         }
-
-        userInput = Number(userInput);  
-        total += userInput;
-
-        if (!userInput) {
-            alert(`Было введено не число, попробуйте еще раз`);
-            total = 0;
-        }
-        
-      }
-
-      if(total){
-        alert(`Общая сумма чисел равна ${total}`);
       }  
-      
-      
+    }else{
+      for(let i = 0; i < numbers.length; i++){
+        total += numbers [i]; 
+      }
+      alert(`Общая сумма чисел равна = ${total}`);
+      break;
+    }
+
+  }
 }
