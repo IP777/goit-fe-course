@@ -1,29 +1,36 @@
 export function task5(){
-    let countryArr = ['Китай', 'Чили', 'Австралия', 'Индия', 'Ямайка']; 
-    let costArr = [100, 250, 170, 80, 120];
+    const countryArr = ['Китай', 'Чили', 'Австралия', 'Индия', 'Ямайка']; 
+    const costArr = [100, 250, 170, 80, 120];
+    let price = 0;
 
     const country = prompt('В какую страну вы хотитете доставку товара?');
 
     if(country){
         switch(country.toLowerCase()){
             case (countryArr[0].toLowerCase()):
-                console.log(`Доставка в ${countryArr[0]} будет стоить ${costArr [0]}кредитов`);
+                price = 0;
                 break;
             case (countryArr[1].toLowerCase()):
-                console.log(`Доставка в ${countryArr[1]} будет стоить ${costArr [1]}кредитов`);
+                price = 1;
                 break;
             case (countryArr[2].toLowerCase()):
-                console.log(`Доставка в ${countryArr[2]} будет стоить ${costArr [2]}кредитов`);
+                price = 2;
                 break;
             case (countryArr[3].toLowerCase()):
-                console.log(`Доставка в ${countryArr[3]} будет стоить ${costArr [3]}кредитов`);
+                price = 3;
                 break;
             case (countryArr[4].toLowerCase()):
-                console.log(`Доставка в ${countryArr[4]} будет стоить ${costArr [4]}кредитов`);
+                price = 4;
                 break;
             default:
-                console.log (`В стране "${country}" доставка не доступна`);
+                price = -1;
                 break;
+        }
+
+        if (price >= 0){
+            console.log(`Доставка в ${countryArr[price]} будет стоить ${costArr [price]}кредитов`);
+        }else{
+            console.log (`В стране "${country}" доставка не доступна`);
         }
     }else{
         console.log(`Доставка отменена`);
