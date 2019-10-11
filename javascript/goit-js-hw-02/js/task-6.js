@@ -7,17 +7,13 @@ export function task6() {
 
     while (true) {
         input = prompt("Введите произвольное число:");
-
-        if (input != null) {
-            input = Number(input);
-            if (input) {
-                numbers.push(Number.parseInt(input));
-                //console.log (numbers);
-            } else {
-                choiсe = confirm(`Вы ввели неправильное число. Продолжить?`);
-                if (!choiсe) {
-                    break;
-                }
+        input = Number(input);
+        if (!Number.isNaN(input) && input != 0) {
+            numbers.push(Number.parseInt(input));
+        } else if (Number.isNaN(input)) {
+            choiсe = confirm(`Вы ввели неправильное число. Продолжить?`);
+            if (!choiсe) {
+                break;
             }
         } else {
             for (let i = 0; i < numbers.length; i++) {

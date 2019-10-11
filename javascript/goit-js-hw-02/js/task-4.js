@@ -1,15 +1,11 @@
 export function task4() {
-    function formatString(string) {
-        let newString = string.split("");
-
-        if (newString.length > 40) {
-            newString.splice(40);
-            newString.push("...");
-            return newString.join("");
+    const formatString = function(string, value = 40) {
+        if (string.length > value) {
+            return `${string.slice(0, value)}...`;
         } else {
-            return newString.join("");
+            return string;
         }
-    }
+    };
 
     console.log(formatString("Curabitur ligula sapien, tincidunt non."));
     // вернется оригинальная строка

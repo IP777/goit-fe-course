@@ -2,11 +2,7 @@ export function task5() {
     function checkForSpam(str) {
         let string = str.toLowerCase();
 
-        if (string.includes("spam") || string.includes("sale")) {
-            return true;
-        } else {
-            return false;
-        }
+        return string.includes("spam") || string.includes("sale");
     }
 
     console.log(checkForSpam("Latest technology news")); // false
