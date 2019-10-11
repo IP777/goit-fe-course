@@ -1,10 +1,10 @@
-export function task1(){
-    const name = '"Генератор защитного поля"';
-    let price = '1000';
+export function task1() {
+	const name = '"Генератор защитного поля"';
+	let price = "1000";
 
-    console.log(`Выбран ${name}, цена за штуку ${price} кредитов`);
+	console.log(`Выбран ${name}, цена за штуку ${price} кредитов`);
 
-    price = '2000';
+	price = "2000";
 
-    console.log(`Выбран ${name}, цена за штуку ${price} кредитов`);
+	onsole.log(`Выбран ${name}, цена за штуку ${price} кредитов`);
 }
