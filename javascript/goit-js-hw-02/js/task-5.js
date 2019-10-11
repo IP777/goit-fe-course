@@ -1,17 +1,16 @@
-export function task5(){
-    function checkForSpam(str){
+export function task5() {
+    function checkForSpam(str) {
         let string = str.toLowerCase();
 
-        if (string.includes('spam') || string.includes('sale')){
-            return true
-        }else{
-            return false
+        if (string.includes("spam") || string.includes("sale")) {
+            return true;
+        } else {
+            return false;
         }
     }
 
-    console.log(checkForSpam('Latest technology news')); // false
-    console.log(checkForSpam('JavaScript weekly newsletter')); // false
-    console.log(checkForSpam('Get best sale offers now!')); // true
-    console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
-
+    console.log(checkForSpam("Latest technology news")); // false
+    console.log(checkForSpam("JavaScript weekly newsletter")); // false
+    console.log(checkForSpam("Get best sale offers now!")); // true
+    console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 }
