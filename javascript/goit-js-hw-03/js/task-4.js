@@ -3,8 +3,8 @@ export function task4() {
         const values = Object.values(employees);
         let sum = 0;
 
-        for (let i = 0; i < values.length; i++) {
-            sum += values[i];
+        for (const value of values) {
+            sum += value;
         }
 
         return sum;

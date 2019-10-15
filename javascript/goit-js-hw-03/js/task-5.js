@@ -1,12 +1,22 @@
 export function task5() {
-    function checkForSpam(str) {
-        let string = str.toLowerCase();
+    function getAllPropValues(arr, prop) {
+        let propArr = [];
 
-        return string.includes("spam") || string.includes("sale");
+        for (const iteration of arr) {
+            propArr.push(iteration[prop]);
+        }
+
+        return propArr;
     }
 
-    console.log(checkForSpam("Latest technology news")); // false
-    console.log(checkForSpam("JavaScript weekly newsletter")); // false
-    console.log(checkForSpam("Get best sale offers now!")); // true
-    console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+    const products = [
+        { name: 'Радар', price: 1300, quantity: 4 },
+        { name: 'Сканер', price: 2700, quantity: 3 },
+        { name: 'Дроид', price: 400, quantity: 7 },
+        { name: 'Захват', price: 1200, quantity: 2 }
+    ];
+
+    console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+    console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+    console.log(getAllPropValues(products, 'category')); // []
 }
