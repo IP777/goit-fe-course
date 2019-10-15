@@ -1,27 +1,30 @@
 export function task4() {
-    const formatString = function(string, value = 40) {
-        if (string.length > value) {
-            return `${string.slice(0, value)}...`;
-        } else {
-            return string;
+    function countTotalSalary(employees) {
+        const values = Object.values(employees);
+        let sum = 0;
+
+        for (let i = 0; i < values.length; i++) {
+            sum += values[i];
         }
-    };
 
-    console.log(formatString("Curabitur ligula sapien, tincidunt non."));
-    // вернется оригинальная строка
+        return sum;
+    }
 
-    console.log(
-        formatString("Vestibulum facilisis, purus nec pulvinar iaculis.")
-    );
-    // вернется форматированная строка
-
-    console.log(formatString("Curabitur ligula sapien."));
-    // вернется оригинальная строка
+    console.log(countTotalSalary({})); // 0
 
     console.log(
-        formatString(
-            "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
-        )
-    );
-    // вернется форматированная строка
+        countTotalSalary({
+            mango: 100,
+            poly: 150,
+            alfred: 80
+        })
+    ); // 330
+
+    console.log(
+        countTotalSalary({
+            kiwi: 200,
+            lux: 50,
+            chelsy: 150
+        })
+    ); // 400
 }
