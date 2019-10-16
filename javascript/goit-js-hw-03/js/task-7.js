@@ -1,27 +1,59 @@
 export function task7() {
-    const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
-    //let login = prompt('Введите login');
-
-    const isLoginValid = function(login) {
-        return login.length >= 4 && login.length <= 16;
+    /*
+     * Типов транзацкий всего два.
+     * Можно положить либо снять деньги со счета.
+     */
+    const Transaction = {
+        DEPOSIT: "deposit",
+        WITHDRAW: "withdraw"
     };
 
-    const isLoginUnique = function(allLogins, login) {
-        return allLogins.includes(login);
-    };
+    /*
+     * Каждая транзакция это объект со свойствами: id, type и amount
+     */
 
-    const addLogin = function(allLogins, login) {
-        if (isLoginValid(login) && !isLoginUnique(allLogins, login)) {
-            return console.log(`Логин "${login}" успешно добавлен!`);
-        } else if (isLoginValid(login)) {
-            return console.log("Такой логин уже используется!");
-        } else {
-            return console.log("Ошибка! Логин должен быть от 4 до 16 символов");
-        }
-    };
+    const account = {
+        // Текущий баланс счета
+        balance: 0,
 
-    addLogin(logins, "Ajax"); // 'Логин успешно добавлен!'
-    addLogin(logins, "robotGoogles"); // 'Такой логин уже используется!'
-    addLogin(logins, "Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-    addLogin(logins, "jqueryisextremelyfast"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+        // История транзакций
+        transactions: [],
+
+        /*
+         * Метод отвечающий за добавление суммы к балансу
+         * Создает объект транзакции и вызывает addTransaction
+         */
+        deposit(amount) {},
+
+        /*
+         * Метод отвечающий за снятие суммы с баланса.
+         * Создает объект транзакции и вызывает addTransaction
+         *
+         * Если amount больше чем текущий баланс, выводи сообщение
+         * о том, что снятие такой суммы не возможно, недостаточно средств.
+         */
+        withdraw(amount) {},
+
+        /*
+         * Метод добавляющий транзацию в свойство transactions
+         * Принимает объект трназкции
+         */
+        addTransaction(transaction) {},
+
+        /*
+         * Метод возвращает текущий баланс
+         */
+        getBalance() {},
+
+        /*
+         * Метод ищет и возвращает объект транзации по id
+         */
+        getTransactionDetails(id) {},
+
+        /*
+         * Метод возвращает количество средств
+         * определенного типа транзакции из всей истории транзакций
+         */
+        getTransactionTotal(type) {}
+    };
 }
