@@ -1,54 +1,29 @@
 export function task7() {
-    /*Напиши скрипт управления личным кабинетом интернет банка.
-    Есть объект account в котором необходимо реализовать методы для работы с 
-    балансом и историей транзакций.*/
-
-    /*
-     * Типов транзацкий всего два.
-     * Можно положить либо снять деньги со счета.
-     */
     const Transaction = {
-        DEPOSIT: "deposit",
-        WITHDRAW: "withdraw"
+        DEPOSIT: 'deposit',
+        WITHDRAW: 'withdraw'
     };
 
-    /*
-     * Каждая транзакция это объект со свойствами: id, type и amount
-     */
-
     const account = {
-        // Текущий баланс счета
         balance: 0,
-
-        // История транзакций
         transactions: [],
+        amountArr: [],
 
-        /*
-         * Метод отвечающий за добавление суммы к балансу
-         * Создает объект транзакции и вызывает addTransaction
-         */
         deposit(amount) {
             this.balance += amount;
             this.addTransaction({
-                id: Math.floor(Math.random() * 100),
+                id: this.transactions.length,
                 type: Transaction.DEPOSIT,
                 amount: this.balance
             });
         },
 
-        /*
-         * Метод отвечающий за снятие суммы с баланса.
-         * Создает объект транзакции и вызывает addTransaction
-         *
-         * Если amount больше чем текущий баланс, выводи сообщение
-         * о том, что снятие такой суммы не возможно, недостаточно средств.
-         */
         withdraw(amount) {
             if (this.balance > amount) {
                 this.balance -= amount;
                 this.addTransaction({
-                    id: Math.floor(Math.random() * 100),
-                    type: Transaction.DEPOSIT,
+                    id: this.transactions.length,
+                    type: Transaction.WITHDRAW,
                     amount: this.balance
                 });
             } else {
@@ -58,36 +33,45 @@ export function task7() {
             }
         },
 
-        /*
-         * Метод добавляющий транзацию в свойство transactions
-         * Принимает объект трназкции
-         */
         addTransaction(transaction) {
             this.transactions.push(transaction);
-            console.log(this.transactions);
         },
 
-        /*
-         * Метод возвращает текущий баланс
-         */
         getBalance() {
             return this.balance;
         },
 
-        /*
-         * Метод ищет и возвращает объект транзации по id
-         */
-        getTransactionDetails(id) {},
+        getTransactionDetails(id) {
+            for (const i of this.transactions) {
+                if (i.id === id) {
+                    return i;
+                }
+            }
+        },
 
-        /*
-         * Метод возвращает количество средств
-         * определенного типа транзакции из всей истории транзакций
-         */
-        getTransactionTotal(type) {}
+        getTransactionTotal(type) {
+            for (const i of this.transactions) {
+                if (i.type === type) {
+                    this.amountArr.push(i.amount);
+                    //return i.amount;
+                }
+            }
+            return this.amountArr;
+        }
     };
 
+    //Проверки
     account.deposit(200);
     account.deposit(400);
     account.withdraw(300);
-    console.log(account.getBalance());
+    console.log(`Текущий баланс = ${account.getBalance()}`);
+    //Выборка по id
+    console.log(account.getTransactionDetails(2));
+    console.log(
+        `Выюорка транзакций по типу ${account.getTransactionTotal(
+            Transaction.DEPOSIT
+        )}`
+    );
+    //Ошибка менше средств нежели сумма на счету
+    account.withdraw(700);
 }
