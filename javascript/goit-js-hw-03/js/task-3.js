@@ -1,5 +1,5 @@
 export function task3() {
-    //Вариант 1
+    //Вариант 1 в 4тыре цикла
     function findBestEmployee(employees) {
         const keys = Object.keys(employees);
         const values = Object.values(employees);
@@ -8,7 +8,7 @@ export function task3() {
         return keys[values.indexOf(maxValue)];
     }
 
-    //Вариант 2
+    //Вариант 2 в 2ва цикла
     function findBestEmployee(employees) {
         employees = Object.entries(employees);
         let max = employees[0][1];
