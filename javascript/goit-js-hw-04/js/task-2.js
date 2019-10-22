@@ -4,18 +4,12 @@ export function task2() {
         add(itemName) {
             console.log(`Adding ${itemName} to inventory`);
 
-            //Так как this в в контексте callback функции недоступна,
-            //обратился непосредственно к обьекту.
-            inventory.items.push(itemName);
+            this.items.push(itemName);
         },
         remove(itemName) {
             console.log(`Removing ${itemName} from inventory`);
 
-            //Так как this в в контексте callback функции недоступна,
-            //обратился непосредственно к обьекту.
-            inventory.items = inventory.items.filter(
-                (item) => item !== itemName
-            );
+            this.items = this.items.filter((item) => item !== itemName);
         }
     };
 
@@ -24,15 +18,20 @@ export function task2() {
         action(itemName);
     };
 
-    invokeInventoryAction("Аптечка", inventory.add);
-    // Invoking action on Аптечка
-    // Adding Аптечка to inventory
+    //Создаю копию функии add и remove. С навсегда привязаным контекст из обьекта inventory.
+    // Как то так :)
+    const boundAdd = inventory.add.bind(inventory);
+    const boundRemove = inventory.remove.bind(inventory);
+
+    invokeInventoryAction("Аптечка", boundAdd);
+    // // Invoking action on Аптечка
+    // // Adding Аптечка to inventory
 
     console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
-    invokeInventoryAction("Фильтр", inventory.remove);
-    // Invoking action on Фильтр
-    // Removing Фильтр from inventory
+    invokeInventoryAction("Фильтр", boundRemove);
+    // // Invoking action on Фильтр
+    // // Removing Фильтр from inventory
 
     console.log(inventory.items); // ['Монорельса', 'Аптечка']
 }
