@@ -18,6 +18,16 @@ export function task2() {
         action(itemName);
     };
 
+    const invokeInventoryOperation = function invokeInventoryOperation(
+        itemName,
+        inventoryAction
+    ) {
+        console.log(
+            `Invoking ${inventoryAction.name} opeartion on ${itemName}`
+        );
+        inventoryAction.call(this, itemName);
+    };
+
     //Создаю копию функии add и remove. С навсегда привязаным контекст из обьекта inventory.
     // Как то так :)
     const boundAdd = inventory.add.bind(inventory);
@@ -34,4 +44,7 @@ export function task2() {
     // // Removing Фильтр from inventory
 
     console.log(inventory.items); // ['Монорельса', 'Аптечка']
+
+    invokeInventoryOperation.bind(inventory, "Аптечка", inventory.add)();
+    invokeInventoryOperation.call(inventory, "Фильтр", inventory.remove);
 }
