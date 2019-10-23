@@ -45,6 +45,12 @@ export function task2() {
 
     console.log(inventory.items); // ['Монорельса', 'Аптечка']
 
-    invokeInventoryOperation.bind(inventory, "Аптечка", inventory.add)();
+    const bindFunction = invokeInventoryOperation.bind(
+        inventory,
+        "Аптечка",
+        inventory.add
+    );
+
+    bindFunction();
     invokeInventoryOperation.call(inventory, "Фильтр", inventory.remove);
 }
