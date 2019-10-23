@@ -28,7 +28,7 @@ export function task2() {
         inventoryAction.call(this, itemName);
     };
 
-    //Создаю копию функии add и remove. С навсегда привязаным контекст из обьекта inventory.
+    //Создаю копию функции add и remove. С навсегда привязаным контекст из обьекта inventory.
     // Как то так :)
     const boundAdd = inventory.add.bind(inventory);
     const boundRemove = inventory.remove.bind(inventory);
