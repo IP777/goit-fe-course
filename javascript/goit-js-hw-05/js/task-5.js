@@ -1,5 +1,10 @@
 export function task5() {
     class Car {
+        static getSpecs(car) {
+            console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}  
+            `);
+        }
+
         constructor(obj) {
             this.speed = obj.speed = 0;
             this._price = obj.price;
@@ -14,11 +19,6 @@ export function task5() {
 
         set price(newPrice) {
             return (this._price = newPrice);
-        }
-
-        static getSpecs(car) {
-            console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}  
-            `);
         }
 
         turnOn() {
