@@ -18,7 +18,7 @@ export function task5() {
         }
 
         set price(newPrice) {
-            return (this._price = newPrice);
+            this._price = newPrice;
         }
 
         turnOn() {
