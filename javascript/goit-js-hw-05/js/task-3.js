@@ -9,10 +9,10 @@ export function task3() {
         }
 
         addItem(addItm) {
-            return this.items.push(addItm);
+            this.items.push(addItm);
         }
         removeItem(removeItm) {
-            return this.items.splice(this.items.indexOf(removeItm), 1);
+            this.items.splice(this.items.indexOf(removeItm), 1);
         }
     }
 
@@ -23,6 +23,7 @@ export function task3() {
         "Антигравитатор"
     ]);
 
+    //Вызов функции===========================================================
     const items = storage.getItems();
     console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
