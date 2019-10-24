@@ -5,12 +5,12 @@ export function task5() {
             `);
         }
 
-        constructor(obj) {
-            this.speed = obj.speed = 0;
-            this._price = obj.price;
-            this.maxSpeed = obj.maxSpeed;
-            this.isOn = obj.isOn = false;
-            this.distance = obj.distance = 0;
+        constructor({ price, maxSpeed }) {
+            this.speed = 0;
+            this._price = price;
+            this.maxSpeed = maxSpeed;
+            this.isOn = false;
+            this.distance = 0;
         }
 
         get price() {
@@ -31,7 +31,11 @@ export function task5() {
         }
 
         accelerate(value) {
-            this.speed += value;
+            if (this.speed <= this.maxSpeed) {
+                this.speed += value;
+            } else {
+                console.log(`нельзя привысить максимально допустимую скорость`);
+            }
         }
 
         decelerate(value) {
