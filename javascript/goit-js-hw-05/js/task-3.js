@@ -1,50 +1,34 @@
 export function task3() {
-    //Вариант 1 в 4тыре цикла
-    function findBestEmployee(employees) {
-        const keys = Object.keys(employees);
-        const values = Object.values(employees);
-        const maxValue = Math.max(...values);
-
-        return keys[values.indexOf(maxValue)];
-    }
-
-    //Вариант 2 в 2ва цикла
-    function findBestEmployee(employees) {
-        employees = Object.entries(employees);
-        let max = employees[0][1];
-        let employeesName = employees[0][0];
-        for (let i = 0; i < employees.length; i++) {
-            if (employees[i][1] > max) {
-                max = employees[i][1];
-                employeesName = employees[i][0];
-            }
+    class Storage {
+        constructor(items) {
+            this.items = items;
         }
-        return employeesName;
+
+        getItems() {
+            return `items: ${this.items}`;
+        }
+
+        addItem(addItm) {
+            return this.items.push(addItm);
+        }
+        removeItem(removeItm) {
+            return this.items.splice(this.items.indexOf(removeItm), 1);
+        }
     }
 
-    console.log(
-        findBestEmployee({
-            ann: 29,
-            david: 35,
-            helen: 1,
-            lorence: 99
-        })
-    ); // lorence
+    const storage = new Storage([
+        "Нанитоиды",
+        "Пролонгер",
+        "Железные жупи",
+        "Антигравитатор"
+    ]);
 
-    console.log(
-        findBestEmployee({
-            poly: 12,
-            mango: 17,
-            ajax: 4
-        })
-    ); // mango
+    const items = storage.getItems();
+    console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
-    console.log(
-        findBestEmployee({
-            lux: 147,
-            david: 21,
-            kiwi: 19,
-            chelsy: 38
-        })
-    ); // lux
+    storage.addItem("Дроид");
+    console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+    storage.removeItem("Пролонгер");
+    console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
 }

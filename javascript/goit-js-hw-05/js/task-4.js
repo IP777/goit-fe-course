@@ -1,30 +1,37 @@
 export function task4() {
-    function countTotalSalary(employees) {
-        const values = Object.values(employees);
-        let sum = 0;
-
-        for (const value of values) {
-            sum += value;
+    class StringBuilder {
+        constructor(value) {
+            this._value = value;
         }
 
-        return sum;
+        get value() {
+            return this._value;
+        }
+
+        // set value(value) {
+        //     this._value = value;
+        // }
+
+        append(str) {
+            return (this._value = this._value + str);
+        }
+        prepend(str) {
+            return (this._value = str + this._value);
+        }
+        pad(str) {
+            return (this._value = str + this._value + str);
+        }
     }
 
-    console.log(countTotalSalary({})); // 0
+    //Вызов функции===========================================================
+    const builder = new StringBuilder(".");
 
-    console.log(
-        countTotalSalary({
-            mango: 100,
-            poly: 150,
-            alfred: 80
-        })
-    ); // 330
+    builder.append("^");
+    console.log(builder.value); // '.^'
 
-    console.log(
-        countTotalSalary({
-            kiwi: 200,
-            lux: 50,
-            chelsy: 150
-        })
-    ); // 400
+    builder.prepend("^");
+    console.log(builder.value); // '^.^'
+
+    builder.pad("=");
+    console.log(builder.value); // '=^.^='
 }

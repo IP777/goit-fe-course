@@ -1,16 +1,15 @@
 export function task2() {
     class User {
-        constructor(name, age, followers) {
-            this.name = name;
-            this.age = age;
-            this.followers = followers;
+        constructor(obj) {
+            this.name = obj.name;
+            this.age = obj.age;
+            this.followers = obj.followers;
         }
 
         getInfo() {
             console.log(
-                `User ${this.name} is ${this.age} years old and has ${this.followers}`
+                `User ${this.name} is ${this.age} years old and has ${this.followers} followers.`
             );
-            console.log(this.obj);
         }
     }
 
