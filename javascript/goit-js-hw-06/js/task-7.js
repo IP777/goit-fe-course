@@ -3,7 +3,7 @@ function task7() {
 
     const calculateTotalBalance = (users) => {
         return users.reduce((acc, value) => {
-            console.log(value.balance);
+            //console.log(value.balance + ` +`);
             return acc + value.balance;
         }, 0);
     };

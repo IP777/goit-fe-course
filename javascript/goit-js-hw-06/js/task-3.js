@@ -9,7 +9,7 @@ function task3() {
             return user.name;
         });
         return sortingForName;
-        //Или можно так записать
+        //Краткая запись
         // return users
         //     .filter((user) => user.gender === gender)
         //     .map((user) => user.name);

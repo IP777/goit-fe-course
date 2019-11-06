@@ -11,9 +11,9 @@ function task9() {
         const mapUserName = sortObjArr.map((user) => user.name);
         return mapUserName;
         //Краткая запись
-        // return (copyUsers = [...users]
+        // return [...users]
         //     .sort((a, b) => a.friends.length > b.friends.length)
-        //     .map((user) => user.name));
+        //     .map((user) => user.name);
     };
 
     console.log(getNamesSortedByFriendsCount(users));

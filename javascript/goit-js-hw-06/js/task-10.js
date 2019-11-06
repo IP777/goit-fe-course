@@ -17,7 +17,7 @@ function task10() {
         return sortByFirstLetter;
 
         //Краткая запись
-        // const sortSkill = users
+        // return [...users]
         //     .reduce((acc, value) => {
         //         if (!acc.includes(value)) {
         //             acc.push(...value.skills);
@@ -25,7 +25,6 @@ function task10() {
         //         return acc;
         //     }, [])
         //     .sort();
-        // return sortSkill;
     };
 
     console.table(getSortedUniqueSkills(users));
