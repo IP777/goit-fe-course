@@ -4,5 +4,5 @@ function task2() {
         return users.filter((user) => user.eyeColor === color);
     };
 
-    console.table(getUsersWithEyeColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+    console.table(getUsersWithEyeColor(users, "blue"), ["name", "eyeColor"]); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 }

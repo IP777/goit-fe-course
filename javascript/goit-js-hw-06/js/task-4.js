@@ -5,5 +5,5 @@ function task4() {
         return users.filter((user) => !user.isActive);
     };
 
-    console.table(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+    console.table(getInactiveUsers(users), ["name", "isActive"]); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 }
