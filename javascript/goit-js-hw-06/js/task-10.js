@@ -3,7 +3,7 @@ function task10() {
     //при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
     //Императивная запись=============================================
-    // const getSortedUniqueSkills = (users) => {
+    // const getSortedUniqueSkills = users => {
     //     const reducedUser = users.reduce((acc, value) => {
     //         if (!acc.includes(value)) {
     //             acc.push(...value.skills);
@@ -20,7 +20,7 @@ function task10() {
 
     //Декларативная запись=============================================
     //1вый способ
-    // const getSortedUniqueSkills = (users) =>
+    // const getSortedUniqueSkills = users =>
     //     [...users]
     //         .reduce((acc, value) => {
     //             if (!acc.includes(value)) {
@@ -31,9 +31,9 @@ function task10() {
     //         .sort();
 
     //2рой способ
-    const getSortedUniqueSkills = (users) =>
+    const getSortedUniqueSkills = users =>
         users
-            .map((user) => user.skills)
+            .map(user => user.skills)
             .reduce((acc, value) => [...acc, ...value], [])
             .sort();
 
