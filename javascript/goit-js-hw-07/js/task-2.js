@@ -1,7 +1,26 @@
-function task2() {
-    //Получить массив объектов пользователей по цвету глаз (поле eyeColor).
-    const getUsersWithEyeColor = (users, color) =>
-        users.filter(user => user.eyeColor === color);
+export function task2() {
+    const ingredients = [
+        "Картошка",
+        "Грибы",
+        "Чеснок",
+        "Помидоры",
+        "Зелень",
+        "Приправы"
+    ];
 
-    console.table(getUsersWithEyeColor(users, "blue"), ["name", "eyeColor"]); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+    const addNewElement = textArr => {
+        const selectList = document.querySelector("#ingredients");
+        const container = document.createElement("div");
+        container.classList.add("container");
+        textArr.forEach(text => container.appendChild(createItemElement(text)));
+        selectList.append(container);
+    };
+
+    const createItemElement = text => {
+        const newLi = document.createElement("li");
+        newLi.textContent = text;
+        return newLi;
+    };
+
+    addNewElement(ingredients);
 }

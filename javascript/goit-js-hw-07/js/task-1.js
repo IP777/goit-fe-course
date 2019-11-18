@@ -1,15 +1,13 @@
-function task1() {
-    const heading = document.createElement("h1");
-    console.log(heading); // <h1></h1>
+export function task1() {
+    const selectDom = document.querySelector("#categories");
+    const selectLiItem = selectDom.querySelectorAll(".item");
 
-    heading.textContent = "This is a heading";
-    console.log(heading); // <h1>This is a heading</h1>
+    console.log(`В списке: ${selectLiItem.length} категории`);
 
-    // ================================================
-    const image = document.createElement("img");
-
-    image.setAttribute("src", "https://placeimg.com/640/480/nature");
-    image.setAttribute("alt", "this is an image");
-
-    console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="this is an image">
+    selectLiItem.forEach(item =>
+        console.log(`
+        Категория: ${item.firstElementChild.textContent}
+        Количество элементов: ${item.lastElementChild.children.length}
+        `)
+    );
 }

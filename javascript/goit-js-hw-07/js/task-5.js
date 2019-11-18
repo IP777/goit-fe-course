@@ -1,4 +1,4 @@
-function task5() {
+export function task5() {
     //Получить пользоваля (не массив) по email (поле email, он уникальный).
     const getUserWithEmail = (users, email) =>
         users.find(user => user.email === email);

@@ -1,21 +1,39 @@
-function task3() {
-    //Получить массив имен пользователей по полу (поле gender).
+export function task3() {
+    const images = [
+        {
+            url:
+                "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            alt: "White and Black Long Fur Cat"
+        },
+        {
+            url:
+                "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            alt: "Orange and White Koi Fish Near Yellow Koi Fish"
+        },
+        {
+            url:
+                "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            alt: "Group of Horses Running"
+        }
+    ];
 
-    //Императивная запись=============================================
-    //const getUsersWithGender = (users, gender) => {
-    // const sortingForGender = users.filter(user => {
-    //     return user.gender === gender;
-    // });
-    // const sortingForName = sortingForGender.map(user => {
-    //     return user.name;
-    // });
-    // return sortingForName;
-    //};
+    const imageList = document.querySelector("#gallery");
 
-    //Декларативная запись=============================================
-    const getUsersWithGender = (users, gender) =>
-        users.filter(user => user.gender === gender).map(user => user.name);
+    const markup = createImage(images);
 
-    console.log(getUsersWithGender(users, "male"));
-    // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+    imageList.insertAdjacentHTML("beforeend", markup);
+
+    function createImage(images) {
+        return images.map(image => createTableRowMarkup(image)).join("");
+    }
+
+    function createTableRowMarkup({ url, alt }) {
+        const img = `
+                <li class='image-item'>
+                    <img class="image-gallery" src="${url}" alt="${alt}">
+                </li>
+                `;
+
+        return img;
+    }
 }
