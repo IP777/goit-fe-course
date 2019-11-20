@@ -24,8 +24,6 @@ const createBoxes = amount => {
 	divContainer.append(container);
 };
 
-const mathNum = () => Math.floor(Math.random() * 255);
-
 const createDivElement = size => {
 	const newDiv = document.createElement("div");
 	newDiv.classList.add("color_box");
@@ -36,3 +34,5 @@ const createDivElement = size => {
 	newDiv.style.height = size + "px";
 	return newDiv;
 };
+
+const mathNum = () => Math.floor(Math.random() * 255);
