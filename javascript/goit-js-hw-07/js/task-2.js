@@ -1,26 +1,18 @@
-export function task2() {
-    const ingredients = [
-        "Картошка",
-        "Грибы",
-        "Чеснок",
-        "Помидоры",
-        "Зелень",
-        "Приправы"
-    ];
+import { ingredients } from "./data-base.js";
 
-    const addNewElement = textArr => {
-        const selectList = document.querySelector("#ingredients");
-        const container = document.createElement("div");
-        container.classList.add("container");
-        textArr.forEach(text => container.appendChild(createItemElement(text)));
-        selectList.append(container);
-    };
+const selectList = document.querySelector("#ingredients");
 
-    const createItemElement = text => {
-        const newLi = document.createElement("li");
-        newLi.textContent = text;
-        return newLi;
-    };
+const addNewElement = textArr => {
+	const container = document.createElement("div");
+	container.classList.add("container");
+	textArr.forEach(text => selectList.appendChild(createItemElement(text)));
+	selectList.append(container);
+};
 
-    addNewElement(ingredients);
-}
+const createItemElement = text => {
+	const newLi = document.createElement("li");
+	newLi.textContent = text;
+	return newLi;
+};
+
+addNewElement(ingredients);

@@ -1,8 +1,7 @@
-function task7() {
-    //Получить общую сумму баланса (поле balance) всех пользователей.
+const rollerInput = document.getElementById("font-size-control");
+const textOutput = document.querySelector("span#text");
 
-    const calculateTotalBalance = users =>
-        users.reduce((acc, value) => acc + value.balance, 0);
-
-    console.log(calculateTotalBalance(users)); // 20916
-}
+rollerInput.oninput = function() {
+	textOutput.style.fontSize = `${this.value}px`;
+	textOutput.innerHTML = this.value;
+};

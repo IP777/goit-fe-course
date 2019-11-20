@@ -1,39 +1,21 @@
-export function task3() {
-    const images = [
-        {
-            url:
-                "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            alt: "White and Black Long Fur Cat"
-        },
-        {
-            url:
-                "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            alt: "Orange and White Koi Fish Near Yellow Koi Fish"
-        },
-        {
-            url:
-                "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            alt: "Group of Horses Running"
-        }
-    ];
+import { images } from "./data-base.js";
 
-    const imageList = document.querySelector("#gallery");
+const imageList = document.querySelector("#gallery");
 
-    const markup = createImage(images);
+const markup = createImage(images);
 
-    imageList.insertAdjacentHTML("beforeend", markup);
+imageList.insertAdjacentHTML("beforeend", markup);
 
-    function createImage(images) {
-        return images.map(image => createTableRowMarkup(image)).join("");
-    }
+function createImage(images) {
+	return images.map(image => createTableRowMarkup(image)).join("");
+}
 
-    function createTableRowMarkup({ url, alt }) {
-        const img = `
+function createTableRowMarkup({ url, alt }) {
+	const img = `
                 <li class='image-item'>
                     <img class="image-gallery" src="${url}" alt="${alt}">
                 </li>
                 `;
 
-        return img;
-    }
+	return img;
 }

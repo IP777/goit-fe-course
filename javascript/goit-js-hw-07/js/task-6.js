@@ -1,11 +1,17 @@
-function task6() {
-    //Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
+const validInput = document.querySelector("#validation-input");
+validInput.classList.add("def");
 
-    const getUsersWithAge = (users, min, max) =>
-        users.filter(user => user.age > min && user.age < max);
-
-    console.table(getUsersWithAge(users, 20, 30), ["name", "age"]); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
-
-    console.table(getUsersWithAge(users, 30, 40), ["name", "age"]);
-    // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
-}
+// validInput.onblur = function() {
+// 	if (this.value.length >= this.dataset.length) {
+// 		this.classList.remove("invalid");
+// 		this.classList.add("valid");
+// 	} else {
+// 		this.classList.remove("valid");
+// 		this.classList.add("invalid");
+// 	}
+// };
+validInput.onchange = function() {
+	this.value.length >= this.dataset.length
+		? this.classList.replace(this.getAttribute("class"), "valid")
+		: this.classList.replace(this.getAttribute("class"), "invalid");
+};

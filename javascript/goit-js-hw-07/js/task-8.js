@@ -1,21 +1,38 @@
-function task8() {
-    //Массив имен всех пользователей у которых есть друг с указанным именем.
+const input = document.querySelector("#controls>input");
+const renderBtn = document.querySelector("[data-action=render]");
+const destroyBtn = document.querySelector("[data-action=destroy]");
+const divContainer = document.getElementById("boxes");
 
-    //Императивная запись=============================================
-    // const getUsersWithFriend = (users, friendName) =>
-    //     users.reduce((allFriends, user) => {
-    //         if (user.friends.some((friend) => friend === friendName)) {
-    //             allFriends.push(user.name);
-    //         }
+renderBtn.onclick = function() {
+	createBoxes(input.value);
+};
 
-    //         return allFriends;
-    //     }, []);
+destroyBtn.onclick = function() {
+	document.querySelector(".container_box").remove();
+	//document.querySelectorAll(".color_box").forEach(el => el.remove());
+};
 
-    const getUsersWithFriend = (users, friendName) =>
-        users
-            .filter(user => user.friends.includes(friendName))
-            .map(user => user.name);
+const createBoxes = amount => {
+	let size = 30;
+	const container = document.createElement("div");
+	container.classList.add("container_box");
 
-    console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-    console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
-}
+	for (let i = 0; i < amount; i++) {
+		container.appendChild(createDivElement(size));
+		size += 10;
+	}
+	divContainer.append(container);
+};
+
+const mathNum = () => Math.floor(Math.random() * 255);
+
+const createDivElement = size => {
+	const newDiv = document.createElement("div");
+	newDiv.classList.add("color_box");
+	newDiv.style.margin = 10 + "px";
+	newDiv.style.backgroundColor =
+		"rgb(" + mathNum() + "," + mathNum() + "," + mathNum() + ")";
+	newDiv.style.width = size + "px";
+	newDiv.style.height = size + "px";
+	return newDiv;
+};
