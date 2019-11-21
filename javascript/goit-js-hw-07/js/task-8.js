@@ -15,6 +15,8 @@ destroyBtn.onclick = function() {
 const createBoxes = amount => {
 	let size = 30;
 
+	//amount.forEach(item =>());
+
 	for (let i = 0; i < amount; i++) {
 		container.appendChild(createDivElement(size));
 		size += 10;

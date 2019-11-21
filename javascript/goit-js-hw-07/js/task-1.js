@@ -9,3 +9,5 @@ selectLiItem.forEach(item =>
         Количество элементов: ${item.lastElementChild.children.length}
         `)
 );
+
+console.log(Array(30).fill(''));
