@@ -4,10 +4,8 @@ const selectLiItem = selectDom.querySelectorAll(".item");
 console.log(`В списке: ${selectLiItem.length} категории`);
 
 selectLiItem.forEach(item =>
-	console.log(`
+    console.log(`
         Категория: ${item.firstElementChild.textContent}
         Количество элементов: ${item.lastElementChild.children.length}
         `)
 );
-
-console.log(Array(30).fill(''));
