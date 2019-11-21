@@ -5,34 +5,35 @@ const divContainer = document.getElementById("boxes");
 const container = document.createDocumentFragment();
 
 renderBtn.onclick = function() {
-	createBoxes(input.value);
+    createBoxes(input.value);
 };
 
 destroyBtn.onclick = function() {
-	document.querySelectorAll(".color_box").forEach(el => el.remove());
+    document.querySelectorAll(".color_box").forEach(el => el.remove());
 };
 
 const createBoxes = amount => {
-	let size = 30;
+    let size = 30;
 
-	//amount.forEach(item =>());
+    //amount.forEach(item =>());
+    //Array(30).fill('')
 
-	for (let i = 0; i < amount; i++) {
-		container.appendChild(createDivElement(size));
-		size += 10;
-	}
-	divContainer.append(container);
+    for (let i = 0; i < amount; i++) {
+        container.appendChild(createDivElement(size));
+        size += 10;
+    }
+    divContainer.append(container);
 };
 
 const createDivElement = size => {
-	const newDiv = document.createElement("div");
-	newDiv.classList.add("color_box");
-	newDiv.style.margin = 10 + "px";
-	newDiv.style.backgroundColor =
-		"rgb(" + mathNum() + "," + mathNum() + "," + mathNum() + ")";
-	newDiv.style.width = size + "px";
-	newDiv.style.height = size + "px";
-	return newDiv;
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("color_box");
+    newDiv.style.margin = 10 + "px";
+    newDiv.style.backgroundColor =
+        "rgb(" + mathNum() + "," + mathNum() + "," + mathNum() + ")";
+    newDiv.style.width = size + "px";
+    newDiv.style.height = size + "px";
+    return newDiv;
 };
 
 const mathNum = () => Math.floor(Math.random() * 255);
