@@ -1,12 +1,10 @@
 import { ingredients } from "./data-base.js";
 
 const selectList = document.querySelector("#ingredients");
+const container = document.createDocumentFragment();
 
 const addNewElement = textArr => {
-	const container = document.createElement("div");
-	container.classList.add("container");
-
-	textArr.forEach(text => selectList.appendChild(createItemElement(text)));
+	textArr.forEach(text => container.appendChild(createItemElement(text)));
 	selectList.append(container);
 };
 
