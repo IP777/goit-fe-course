@@ -2,9 +2,10 @@ import { images } from "./data-base.js";
 
 const imageList = document.querySelector("#gallery");
 
-const markup = createImage(images);
+const imageStr = createImage(images);
 
-imageList.insertAdjacentHTML("beforeend", markup);
+imageList.innerHTML = imageStr;
+//imageList.insertAdjacentHTML("beforeend", imageStr);
 
 function createImage(images) {
 	return images.map(image => createTableRowMarkup(image)).join("");
