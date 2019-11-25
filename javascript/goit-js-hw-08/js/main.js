@@ -1,16 +1,30 @@
-{
-	/* <li class="gallery__item">
-  <a
-    class="gallery__link"
-    href="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-  >
-    <img
-      class="gallery__image"
-      src="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546__340.jpg"
-      data-source="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-      alt="Tulips"
-    />
-  </a>
-</li> */
+import imageArr from "./gallery-items.js";
+
+const imageList = document.querySelector(".js-gallery");
+
+imageList.innerHTML = createImage(imageArr);
+//imageList.insertAdjacentHTML("beforeend", imageStr);
+
+function createImage(imgArr) {
+    return imgArr.map(imageIter => createTableRowMarkup(imageIter)).join("");
 }
-console.log(`Hello world`);
+
+function createTableRowMarkup({ preview, original, description }) {
+    const img = `
+                  <li class="gallery__item">
+                  <a
+                    class="gallery__link"
+                    href="${original}"
+                  >
+                    <img
+                      class="gallery__image"
+                      src="${preview}"
+                      data-source="${original}"
+                      alt="${description}"
+                    />
+                  </a>
+                </li> 
+                `;
+
+    return img;
+}

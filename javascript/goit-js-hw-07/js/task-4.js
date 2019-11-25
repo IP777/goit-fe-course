@@ -6,18 +6,17 @@ const incrementBtn = document.querySelector("[data-action = increment]");
 const counterEdit = () => (value.textContent = counter);
 
 const handleClickPlus = () => {
-	counter += 1;
-	counterEdit();
+    counter += 1;
+    counterEdit();
 };
 
 const handleClickMinus = () => {
-	counter -= 1;
-	counterEdit();
+    counter -= 1;
+    counterEdit();
 };
 
 incrementBtn.addEventListener("click", handleClickPlus);
 decrementBtn.addEventListener("click", handleClickMinus);
-decrementBtn.addEventListener("click", counterEdit);
 
 // const refs = {
 // 	counter: document.querySelector("#counter"),
