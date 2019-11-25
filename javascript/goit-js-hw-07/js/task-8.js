@@ -13,12 +13,11 @@ destroyBtn.onclick = function() {
 };
 
 const createBoxes = amount => {
-	let size = 30;
-
-	for (let i = 0; i < amount; i++) {
-		container.appendChild(createDivElement(size));
-		size += 10;
-	}
+	Array(parseInt(amount))
+		.fill("")
+		.forEach((element, index) => {
+			container.appendChild(createDivElement(index * 10));
+		});
 	divContainer.append(container);
 };
 
@@ -28,8 +27,8 @@ const createDivElement = size => {
 	newDiv.style.margin = 10 + "px";
 	newDiv.style.backgroundColor =
 		"rgb(" + mathNum() + "," + mathNum() + "," + mathNum() + ")";
-	newDiv.style.width = size + "px";
-	newDiv.style.height = size + "px";
+	newDiv.style.width = 30 + size + "px";
+	newDiv.style.height = 30 + size + "px";
 	return newDiv;
 };
 
