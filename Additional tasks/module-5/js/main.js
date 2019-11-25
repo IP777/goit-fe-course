@@ -79,3 +79,10 @@ try{
 
 }
 */
+
+window.addEventListener(
+	"scroll",
+	_.throttle(() => {
+		console.log("Scroll event handler invocation every 300ms.");
+	}, 300)
+);
