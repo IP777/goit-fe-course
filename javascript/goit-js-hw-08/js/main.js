@@ -88,10 +88,12 @@ const modWin = {
 	}
 };
 
+//Функция возвращает номер элемента масива в масиве
 const findElement = (value, key = "description", arr = imageArr) => {
 	return arr.findIndex(num => num[key] === value);
 };
 
+//Делегирование события клика по картинке
 refs.imageList.addEventListener("click", handleNavClick);
 
 function handleNavClick(event) {
