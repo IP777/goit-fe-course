@@ -88,7 +88,8 @@ const modWin = {
 	}
 };
 
-//Функция возвращает номер элемента масива в масиве
+//Универсальная функция возвращает номер елемента в масиве.
+//Ищет ключ, значение
 const findElement = (value, key = "description", arr = imageArr) => {
 	return arr.findIndex(num => num[key] === value);
 };
