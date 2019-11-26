@@ -38,11 +38,10 @@ const modWin = {
 		position: 0
 	},
 	createWindow(src, alt) {
-		this.getCurrentPosition(alt);
+		this.state.position = this.findElement(alt);
 		this.openWindow();
 		this.createImg(src, alt);
-		this.state.closeBtn.onclick = () => modWin.closeWindow();
-		this.state.closingWrapper.onclick = () => modWin.closeWindow();
+		this.addOnclick();
 	},
 	openWindow() {
 		this.state.wrapper.classList.add("is-open");
@@ -59,8 +58,13 @@ const modWin = {
 		this.state.image.setAttribute(`src`, ``);
 		this.state.image.setAttribute(`alt`, ``);
 	},
-	getCurrentPosition(value) {
-		this.state.position = findElement(value);
+	addOnclick() {
+		this.state.closeBtn.onclick = () => modWin.closeWindow();
+		this.state.closingWrapper.onclick = () => modWin.closeWindow();
+	},
+	//Функция возвращает текущую позицию элемента в масиве
+	findElement(value) {
+		return imageArr.findIndex(num => num["description"] === value);
 	},
 	nextImg() {
 		this.clearImg();
@@ -69,10 +73,9 @@ const modWin = {
 		} else {
 			this.state.position = 0;
 		}
-		this.createImg(
-			imageArr[this.state.position].original,
-			imageArr[this.state.position].description
-		);
+		const src = imageArr[this.state.position].original;
+		const alt = imageArr[this.state.position].description;
+		this.createImg(src, alt);
 	},
 	prevImg() {
 		this.clearImg();
@@ -81,17 +84,10 @@ const modWin = {
 		} else {
 			this.state.position = imageArr.length - 1;
 		}
-		this.createImg(
-			imageArr[this.state.position].original,
-			imageArr[this.state.position].description
-		);
+		const src = imageArr[this.state.position].original;
+		const alt = imageArr[this.state.position].description;
+		this.createImg(src, alt);
 	}
-};
-
-//Универсальная функция возвращает номер елемента в масиве.
-//Ищет ключ, значение
-const findElement = (value, key = "description", arr = imageArr) => {
-	return arr.findIndex(num => num[key] === value);
 };
 
 //Делегирование события клика по картинке
