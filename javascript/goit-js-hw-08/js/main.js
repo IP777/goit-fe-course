@@ -15,7 +15,8 @@ const galleryAction = {
       <li class="gallery__item">
         <a class="gallery__link" href="${original}">
           <img class="gallery__image"
-                    src="${preview}"
+                    src="https://via.placeholder.com/402x246?text=Lazy-load Image"
+            data-lazy="${preview}"
             data-source="${original}"
                  alt="${description}"
                       />
@@ -26,8 +27,13 @@ const galleryAction = {
 	}
 };
 
-refs.imageList.innerHTML = galleryAction.createImage(imageArr);
-//imageList.insertAdjacentHTML("beforeend", imageStr);
+//elem.remove()
+//refs.imageList.innerHTML = galleryAction.createImage(imageArr);
+refs.imageList.innerHTML = "";
+refs.imageList.insertAdjacentHTML(
+	"beforeend",
+	galleryAction.createImage(imageArr)
+);
 
 const modWin = {
 	state: {
@@ -60,7 +66,10 @@ const modWin = {
 	},
 	addOnclick() {
 		this.state.closeBtn.onclick = () => modWin.closeWindow();
-		this.state.closingWrapper.onclick = () => modWin.closeWindow();
+		this.state.closingWrapper.onclick = event => {
+			if (event.target.nodeName !== "DIV") return;
+			modWin.closeWindow();
+		};
 	},
 	//Функция возвращает текущую позицию элемента в масиве
 	findElement(value) {
