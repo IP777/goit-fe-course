@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	display: -webkit-box;
+	display: flex;
+	-webkit-transform: translate(50%);
+	        transform: translate(50%);
+	background: teal;
+	color: antiquewhite;
+}
+

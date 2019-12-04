@@ -1,7 +1,7 @@
-const getMess = () => "Hello me!!!";
+//const getMess = () => "Hello me!!!";
 
 // module.exports = {
 // 	getMess
 // };
 
-export default getMess;
+export default "Web pack is gooooood!";
