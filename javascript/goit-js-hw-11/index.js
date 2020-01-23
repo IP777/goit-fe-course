@@ -17,7 +17,7 @@ const refs = {
 	body: document.body,
 	title: document.querySelector("#js-title")
 };
-11;
+
 let timerId = null;
 let isActive = false;
 
