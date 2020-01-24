@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 body {
 	margin: 0 auto;
 	text-align: center;
@@ -24,8 +26,30 @@ button:hover {
 	color: black;
 }
 
+.timer {
+	display: flex;
+	justify-content: center;
+}
+
 .field {
-	display: inline-block;
-	margin: 30px 0;
-	font-size: 35px;
+	background-color: #3199dc;
+	margin: 0 10px;
+	border-radius: 10px;
+	border: 2px solid #3199dc;
+	box-shadow: 0 0 0 2px white, 0 0 0 4px #3199dc;
+}
+
+.value {
+	display: block;
+	margin: 10px 15px;
+	font-family: "Roboto", sans-serif;
+	font-size: 50px;
+	color: beige;
+}
+
+.label {
+	display: block;
+	margin: 10px 10px;
+	color: beige;
+	text-transform: uppercase;
 }
