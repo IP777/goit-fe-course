@@ -55,3 +55,14 @@ console.log(all.next());
 console.log(all.next());
 console.log(all.next());
 console.log(all.next());
+
+//------------------------------------------
+
+function* infinityGen() {
+    let i = 0;
+    while (true) {
+        yield i++;
+    }
+}
+
+//infinityGen();
